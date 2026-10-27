@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "happening_app",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "happening_app",
+      "program": "lib/main.dart"
+    }
+  ]
+}

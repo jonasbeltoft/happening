@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>body{margin:0;background:#E8E4DC;font-family:Archivo,system-ui,sans-serif}a{color:#D34F00}a:hover{color:#FF7E00}</style>
+</helmet>
+
+<section style="padding:48px 52px 72px">
+
+<div style="display:flex;align-items:baseline;gap:12px;margin:0 0 12px">
+  <span style="font:700 11.5px Archivo,sans-serif;padding:5px 10px;background:#17181B;color:#F7F5F1;border-radius:999px">6a</span>
+  <span style="font:700 17px/1.2 Archivo,sans-serif;color:#17181B">Happening v5 — Chalk &amp; Ember</span>
+</div>
+<p style="margin:0 0 34px;font:400 14px/1.7 Archivo,sans-serif;color:#5B5D62;max-width:900px;text-wrap:pretty">Same eight screens, same information, nothing else carried over. Chalk-white paper on warm grey, graphite ink, one ember accent, sentence case, 14–34px radii and soft cast shadows instead of hard offsets. Below: what each screen actually has to say, then the screens.</p>
+
+<div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E;margin:0 0 14px">Design system</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;max-width:1560px;margin:0 0 52px">
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Color</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px">
+      <div><div style="height:44px;border-radius:8px;background:#FF7E00"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Ember</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#FF7E00</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#D34F00"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Ember ink</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#D34F00</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#FCBA70"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Ember light</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#FCBA70</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#FFF1E4;border:1px solid rgba(23,24,27,.08)"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Ember tint</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#FFF1E4</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#17181B"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Graphite</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#17181B</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#5B5D62"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Ink 2</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#5B5D62</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#85878E"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Muted</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#85878E</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#A9ABB1"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Faint</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#A9ABB1</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#FAF8F4;border:1px solid rgba(23,24,27,.08)"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Chalk</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#FAF8F4</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#FFFFFF;border:1px solid rgba(23,24,27,.08)"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Card</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#FFFFFF</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#E8E4DC"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Canvas</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#E8E4DC</div></div>
+      <div><div style="height:44px;border-radius:8px;background:#E3DED4"></div><div style="margin-top:5px;font:600 10.5px Archivo,sans-serif;color:#17181B">Media</div><div style="font:500 10px Archivo,sans-serif;color:#A9ABB1">#E3DED4</div></div>
+    </div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Ember is for one thing per view: the decision the user hasn't made. Graphite is ink and the splash background. Never ember-on-graphite with an ember glow — that reads neon; on dark, the primary button is chalk with an ember underline.</div>
+    <div style="margin-top:12px;background:#17181B;border-radius:14px;padding:14px 16px">
+      <div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FCBA70">Graphite as contrast</div>
+      <div style="margin-top:8px;font:400 12.5px/1.6 Archivo,sans-serif;color:rgba(247,245,241,.8);text-wrap:pretty">Roughly one graphite surface per screen, and only where the content deserves emphasis over its neighbours — the friends-are-going card on Explore, Accept on an invite, the whole splash. Chalk text, ember reserved for the eyebrow or a single number. Two black cards in one view flattens the effect; a black card next to an ember button makes both shout.</div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Type</div>
+    <div style="margin-top:12px;font:400 30px/1.1 'Instrument Serif',serif;color:#17181B">Instrument Serif</div>
+    <div style="margin-top:4px;font:500 12px Archivo,sans-serif;color:#85878E">Screen titles 30–32 · section heads 21 · numerals 19–30. Italic for the wordmark and pitch quotes.</div>
+    <div style="margin-top:14px;font:700 19px Archivo,sans-serif;color:#17181B">Archivo</div>
+    <div style="margin-top:4px;font:500 12px Archivo,sans-serif;color:#85878E">Everything else. Row titles 15/600 · body 13.5/400 · meta 12.5/500 · eyebrows 10.5/700 uppercase, .14em tracking.</div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Sentence case everywhere except eyebrows. Numbers set in the serif when they're the point (counts, walk minutes, dates); in Archivo when they sit inside a sentence.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Shape &amp; elevation</div>
+    <div style="display:flex;gap:10px;margin-top:12px;align-items:flex-end">
+      <div style="flex:1;height:56px;border-radius:10px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.06)"></div>
+      <div style="flex:1;height:56px;border-radius:16px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.06),0 6px 14px -10px rgba(23,24,27,.35)"></div>
+      <div style="flex:1;height:56px;border-radius:20px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.06),0 14px 30px -18px rgba(23,24,27,.4)"></div>
+    </div>
+    <div style="margin-top:10px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Radii: 10 pills/tiles, 12–14 buttons and small tiles, 16 rows, 18–20 cards, 26–28 sheets, 34 device frame. Three elevations only — rows (1px hairline shadow), cards (short 6/14), hero cards and sheets (14/30). Shadows are short and vertical; if one reaches further than the element is tall, it's wrong. Any clipped scroll row needs padding-bottom for its own shadow.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">State vs. call to action</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+      <div style="background:#FAF8F4;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:10px">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Answered</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">20:30 · 1,4 km</div></div>
+        <div style="flex:none;display:flex;align-items:center;gap:5px;font:600 12px Archivo,sans-serif;color:#5B5D62"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#17181B" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M1.6 7.1 4.7 10.2 11.4 3"></path></svg>You're in</div>
+      </div>
+      <div style="background:#FAF8F4;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:10px">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Unanswered</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#D34F00">10:00 · no answer yet</div></div>
+        <div style="flex:none;font:700 12.5px Archivo,sans-serif;color:#17181B;background:#FF7E00;border-radius:10px;padding:9px 13px;box-shadow:0 6px 14px -7px rgba(255,126,0,.9)">I'm going</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Only unmade decisions get button chrome. A settled state is flat text with a check — never a pill that looks pressable. The meta line carries "no answer yet" in ember ink so the row explains itself without a label. Same vocabulary on Mine, the map drawer and event pages.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Action bars &amp; buttons</div>
+    <div style="display:flex;gap:10px;margin-top:12px">
+      <div style="width:104px;flex:none;height:56px;border:1.5px solid rgba(23,24,27,.2);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#17181B"><div style="font:600 14.5px Archivo,sans-serif">Secondary</div><div style="margin-top:1px;font:500 11px Archivo,sans-serif;color:#85878E">sub-label</div></div>
+      <div style="flex:1;height:56px;background:#FF7E00;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#17181B;box-shadow:0 10px 24px -10px rgba(255,126,0,.75)"><div style="font:700 15.5px Archivo,sans-serif">Primary!</div><div style="margin-top:1px;font:500 11.5px Archivo,sans-serif;color:rgba(23,24,27,.65)">consequence of tapping</div></div>
+    </div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Every commit bar is the same: fixed 56px buttons, 10px gap, 14/22/26 padding, hairline top border. Primary sits on the <b>right</b> — that's where the thumb is. Two-line buttons are deliberate: bold verb over a quiet consequence ("you'll be number 65", "Tap to change"). Destructive or declining choices stay grey and slimmer (104px) than the thing you want tapped.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Horizontal shelves</div>
+    <div style="display:flex;gap:10px;margin-top:12px;overflow:hidden">
+      <div style="width:140px;flex:none;height:70px;border-radius:18px;background:#FAF8F4;box-shadow:0 1px 2px rgba(23,24,27,.06)"></div>
+      <div style="width:140px;flex:none;height:70px;border-radius:18px;background:#FAF8F4;box-shadow:0 1px 2px rgba(23,24,27,.06)"></div>
+      <div style="width:140px;flex:none;height:70px;border-radius:18px;background:#FAF8F4;box-shadow:0 1px 2px rgba(23,24,27,.06)"></div>
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:8px"><div style="width:56px;height:3px;border-radius:2px;background:rgba(23,24,27,.12);overflow:hidden"><div style="width:45%;height:100%;border-radius:2px;background:rgba(23,24,27,.42)"></div></div></div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Anything with more items than fit scrolls sideways and bleeds off the right edge (negative margin past the 22px gutter) — never a "+2" stub. Native scrollbars are always off (<span style="font-family:monospace">scrollbar-width:none</span>); the affordance is a 56×3 track under the shelf whose thumb follows real scroll position and can't be dragged.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Event page stack</div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px">
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">1 · Identity — eyebrow, title, venue, avatar stack with friend count, Invite</div>
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">2 · Facts — labelled tiles or rows, each with an inline icon</div>
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">3 · Pitch — one italic serif line from the organizer</div>
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">4 · Map — strip with walk time</div>
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">5 · Description — the long version, with More</div>
+      <div style="font:600 13px Archivo,sans-serif;color:#17181B">6 · Feed — composer first, then posts, last one with a photo</div>
+    </div>
+    <div style="margin-top:12px;font:400 12.5px/1.6 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">Every event page uses this order whether or not it has a cover. Facts appear once: address lives in the facts, walk time on the map, attendance in the avatar row. The commit bar is pinned; everything above it scrolls, ending in a 24px spacer.</div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">Rules &amp; gotchas</div>
+    <div style="margin-top:12px;font:400 12.5px/1.7 Archivo,sans-serif;color:#3C3E42;text-wrap:pretty">
+      Icons are inline SVG on <span style="font-family:monospace">currentColor</span> — never icon fonts or private-use glyphs, which render as empty boxes off-device.<br>
+      No em dashes, no prime marks for minutes ("14" over "min", not 14′), no emoji.<br>
+      Every count states its unit in words; two numbers in one line must mean the same kind of thing.<br>
+      Scroll columns are <span style="font-family:monospace">flex:1;min-height:0;overflow-y:auto</span> — a fixed-height column silently clips its last row.<br>
+      Pinned headers over scrolling content need their own chalk background, or the title collides with the bar.<br>
+      Hit targets 44px minimum; row buttons 36–40px tall with a nowrap meta line so nothing wraps into them.
+    </div>
+  </div>
+
+</div>
+
+<div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E;margin:0 0 14px">The information, screen by screen</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;max-width:1560px;margin:0 0 52px">
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">01 · Splash</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">Wordmark, promise line, a live list of what's on right now (3 named events with time or “now”, plus “+28 more”), tonight's event count and people-out count, and four ways in: see what's happening, log in, join with a code, browse anonymously.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">02 · Mine</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">Your week and RSVP tallies (going / interested / tonight); pending invites with inviter, time, going-count, accept or later; the next thing you're going to with countdown, walk, price, attendance, friends; later-this-week rows with day, time, distance and their own RSVP state; upcoming vs previous; search and code entry.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">03 · Map</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">City selector, tonight's count and people out, pins including one cluster and one event you're already going to, filters (now, under 1 km, free, friends), recenter, and an “around you now” drawer: nearest events with distance, start or since-time, attendance, friends, one-tap RSVP.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">04 · Explore</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">Search for events or places, code entry, and shelves that state their own reason — “because you went to 3 markets”, “10 friends are going” with named friends — plus a walkable-in-the-next-hour list of 7, each row carrying distance, start time and walk time.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">05 · Event, with cover</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">Back and share, organizer cover, live state, city, title and venue, attendance including how many are friends, the facts (when, price, where, walk, vibe), a two-line description with more, a map strip with walk time, friends going with an invite action, and a commit bar: interested, or I'm going.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">06 · Event, no cover, answered</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">The same page without imagery: event code in the bar, label/value rows for when, where, price, vibe, host and their event count, attendance; the organizer's one-line pitch as a quote; map with walk time; and the state flipped — you're going, tap to change, with invite the only thing still asking.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">07 · City page, logged out</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">Wordmark and “right now in your city”, tonight's count and people out, three live rows with state or start time, “+28 more — sign in to filter”, a map preview, the rule stated plainly (browsing is free; saving, RSVP and invites need an account), then create account and log in.</div>
+  </div>
+  <div style="background:#FFFFFF;border-radius:14px;padding:16px 18px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 12px 26px -16px rgba(23,24,27,.35)">
+    <div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#FF7E00">08 · Join by code</div>
+    <div style="margin-top:9px;font:400 12.5px/1.65 Archivo,sans-serif;color:#3C3E42">A sheet over the current screen: close and paste-link-instead, six character cells (three filled, one focused), the rule that private events never appear in search, and once the code resolves, a preview showing title, private, day, time and total going only — never which friends.</div>
+  </div>
+</div>
+
+<div style="font:700 11.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E;margin:0 0 18px">The screens</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:40px 34px;align-items:flex-start">
+
+<!-- 01 SPLASH -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">01</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Splash</span></div>
+<div style="width:390px;height:844px;background:#17181B;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.1),0 30px 60px -24px rgba(23,24,27,.55);display:flex;flex-direction:column;color:#F7F5F1">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:rgba(247,245,241,.55)"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="padding:64px 30px 0">
+    <div style="font:italic 400 54px/1 'Instrument Serif',serif;letter-spacing:-.01em">Happening</div>
+    <div style="margin-top:18px;font:400 17.5px/1.5 Archivo,sans-serif;color:rgba(247,245,241,.62);max-width:290px;text-wrap:pretty">Everything on tonight, within walking distance, before it starts.</div>
+  </div>
+  <div style="margin:44px 22px 0;background:rgba(247,245,241,.06);border:1px solid rgba(247,245,241,.1);border-radius:20px;padding:18px 20px 8px">
+    <div style="display:flex;align-items:center;gap:8px;font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FCBA70"><span style="width:6px;height:6px;border-radius:50%;background:#FF7E00;box-shadow:0 0 0 4px rgba(255,126,0,.22)"></span>On right now in Copenhagen</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(247,245,241,.08)"><span style="font:500 15px Archivo,sans-serif">Vinyl night at Bakken</span><span style="font:600 13px Archivo,sans-serif;color:#FF7E00">now</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(247,245,241,.08)"><span style="font:500 15px Archivo,sans-serif">Harbour swim &amp; sauna</span><span style="font:600 13px Archivo,sans-serif;color:rgba(247,245,241,.5)">20:30</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0"><span style="font:500 15px Archivo,sans-serif">Open mic, Absalon</span><span style="font:600 13px Archivo,sans-serif;color:rgba(247,245,241,.5)">21:00</span></div>
+    <div style="padding:2px 0 14px;font:500 13px Archivo,sans-serif;color:#FCBA70">+28 more tonight</div>
+  </div>
+  <div style="display:flex;gap:10px;margin:20px 22px 0">
+    <div style="flex:1;background:rgba(247,245,241,.06);border-radius:16px;padding:14px 16px"><div style="font:400 30px/1 'Instrument Serif',serif;color:#FFFFFF">31</div><div style="margin-top:5px;font:500 11.5px Archivo,sans-serif;color:rgba(247,245,241,.5)">events tonight</div></div>
+    <div style="flex:1;background:rgba(247,245,241,.06);border-radius:16px;padding:14px 16px"><div style="font:400 30px/1 'Instrument Serif',serif;color:#FFFFFF">1.204</div><div style="margin-top:5px;font:500 11.5px Archivo,sans-serif;color:rgba(247,245,241,.5)">people out</div></div>
+  </div>
+  <div style="margin-top:auto;padding:0 22px 30px">
+    <div style="background:#F0F0EC;color:#17181B;border-radius:16px;padding:17px;text-align:center;font:700 16px Archivo,sans-serif;border-bottom:3px solid #DF7234">Log in to see what's happening</div>
+    <div style="margin-top:10px;border:1px solid rgba(223,114,52,.55);color:#FCBA70;border-radius:16px;padding:15px;text-align:center;font:600 15px Archivo,sans-serif">Create an account</div>
+    <div style="margin-top:16px;text-align:center;font:500 13.5px Archivo,sans-serif;color:rgba(247,245,241,.45)">Browse anonymously</div>
+  </div>
+</div>
+</div>
+
+<!-- 02 MINE -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">02</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Mine</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#85878E"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="padding:18px 22px 14px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div><div style="font:400 30px/1 'Instrument Serif',serif;color:#17181B">Your week</div><div style="margin-top:6px;font:500 13px Archivo,sans-serif;color:#85878E">Mon 14 – Sun 20 October</div></div>
+      <div style="display:flex;gap:8px"><div style="width:36px;height:36px;border-radius:12px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.08);display:flex;align-items:center;justify-content:center;font:600 14px Archivo,sans-serif;color:#4A4C52"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="7.4" cy="7.4" r="5.6"></circle><path d="M11.6 11.6 16.2 16.2"></path></svg></div><div style="width:36px;height:36px;border-radius:12px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.08);display:flex;align-items:center;justify-content:center;font:700 12px Archivo,sans-serif;color:#4A4C52">#</div></div>
+    </div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;padding:0 22px">
+    <div style="padding:2px 0 14px;font:500 13.5px/1.5 Archivo,sans-serif;color:#5B5D62"><span style="font-weight:700;color:#17181B">You have 4 events coming up, 2 of them tonight.</span> Seven more are still waiting on an answer from you.</div>
+    <div onScroll="{{ onInvitesScroll }}" style="display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px 10px">
+      <div style="width:300px;flex:none;background:#FFF1E4;border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(23,24,27,.05)">
+        <div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D34F00">Invite 1 of 2</div>
+        <div style="margin-top:12px;font:600 16px Archivo,sans-serif;color:#17181B">Rooftop dinner, Nørrebro</div>
+        <div style="margin-top:4px;font:500 13px Archivo,sans-serif;color:#7A5334">Mia invited you · Fri 19:00 · 9 going</div>
+        <div style="display:flex;gap:9px;margin-top:14px">
+          <div style="width:104px;flex:none;background:rgba(23,24,27,.06);color:#4A4C52;border-radius:12px;padding:11px 8px;text-align:center;font:600 13.5px Archivo,sans-serif">Not going</div>
+          <div style="flex:1;background:#17181B;color:#FAF8F4;border-radius:12px;padding:11px;text-align:center;font:600 14px Archivo,sans-serif">Accept</div>
+        </div>
+      </div>
+      <div style="width:300px;flex:none;background:#FFF1E4;border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(23,24,27,.05)">
+        <div style="display:flex;justify-content:space-between;align-items:center"><div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D34F00">Invite 2 of 2</div></div>
+        <div style="margin-top:12px;font:600 16px Archivo,sans-serif;color:#17181B">Sunday football, Fælleden</div>
+        <div style="margin-top:4px;font:500 13px Archivo,sans-serif;color:#7A5334">Jonas invited you · Sun 11:00 · 14 going</div>
+        <div style="display:flex;gap:9px;margin-top:14px">
+          <div style="width:104px;flex:none;background:rgba(23,24,27,.06);color:#4A4C52;border-radius:12px;padding:11px 8px;text-align:center;font:600 13.5px Archivo,sans-serif">Not going</div>
+          <div style="flex:1;background:#17181B;color:#FAF8F4;border-radius:12px;padding:11px;text-align:center;font:600 14px Archivo,sans-serif">Accept</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:2px">
+      <div style="width:56px;height:3px;border-radius:2px;background:rgba(23,24,27,.12);overflow:hidden">
+        <div style="width:50%;height:100%;border-radius:2px;background:rgba(23,24,27,.42);transition:transform .12s ease;transform:{{ invitesThumbShift }}"></div>
+      </div>
+    </div>
+    <div style="margin:18px 0 10px;font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">Next up</div>
+    <div style="background:#FFFFFF;border-radius:20px;padding:18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 14px 30px -18px rgba(23,24,27,.4)">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="display:flex;align-items:center;gap:7px;font:700 11px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#D34F00"><span style="width:6px;height:6px;border-radius:50%;background:#FF7E00"></span>In 2 h 40 m</div>
+        <div style="font:600 12.5px Archivo,sans-serif;color:#17181B;background:#FFF1E4;border-radius:8px;padding:4px 8px">Going</div>
+      </div>
+      <div style="margin-top:10px;font:600 19px/1.25 Archivo,sans-serif;color:#17181B">Vinyl night at Bakken</div>
+      <div style="margin-top:5px;font:500 13.5px Archivo,sans-serif;color:#85878E">Tonight 20:00–01:00 · 12 min walk · 80 kr</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(23,24,27,.08)">
+        <div style="display:flex">
+          <div style="width:26px;height:26px;border-radius:50%;background:#FCBA70;border:2px solid #FFFFFF"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#DF7234;border:2px solid #FFFFFF;margin-left:-9px"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#4A4C52;border:2px solid #FFFFFF;margin-left:-9px"></div>
+        </div>
+        <div style="font:500 13px Archivo,sans-serif;color:#4A4C52">64 going · 3 friends</div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin:24px 0 8px">
+      <div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">Later this week</div>
+      <div style="display:flex;gap:14px;font:600 12.5px Archivo,sans-serif"><span style="color:#17181B;border-bottom:2px solid #FF7E00;padding-bottom:2px">Upcoming</span><span style="color:#A9ABB1">Previous</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:34px;flex:none;text-align:center"><div style="font:700 10.5px Archivo,sans-serif;color:#85878E">THU</div><div style="font:400 22px/1 'Instrument Serif',serif;color:#17181B">17</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Harbour swim &amp; sauna</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">20:30 · 1,4 km</div></div>
+        <div style="display:flex;align-items:center;gap:5px;font:600 12px Archivo,sans-serif;color:#5B5D62"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#17181B" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M1.6 7.1 4.7 10.2 11.4 3"></path></svg>You're in</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:34px;flex:none;text-align:center"><div style="font:700 10.5px Archivo,sans-serif;color:#85878E">SAT</div><div style="font:400 22px/1 'Instrument Serif',serif;color:#17181B">19</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Flea market, Sønder Blvd</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#D34F00;white-space:nowrap">10:00 · no answer yet</div></div>
+        <div style="flex:none;font:700 12.5px Archivo,sans-serif;color:#17181B;background:#FF7E00;border-radius:10px;padding:9px 13px;box-shadow:0 6px 14px -7px rgba(255,126,0,.9)">I'm going</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:34px;flex:none;text-align:center"><div style="font:700 10.5px Archivo,sans-serif;color:#85878E">SUN</div><div style="font:400 22px/1 'Instrument Serif',serif;color:#17181B">20</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Open mic, Absalon</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#D34F00;white-space:nowrap">21:00 · no answer yet</div></div>
+        <div style="flex:none;font:700 12.5px Archivo,sans-serif;color:#17181B;background:#FF7E00;border-radius:10px;padding:9px 13px;box-shadow:0 6px 14px -7px rgba(255,126,0,.9)">I'm going</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:34px;flex:none;text-align:center"><div style="font:700 10.5px Archivo,sans-serif;color:#85878E">TUE</div><div style="font:400 22px/1 'Instrument Serif',serif;color:#17181B">22</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Ceramics fair, Refshaleøen</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E;white-space:nowrap">12:00 · 3,4 km</div></div>
+        <div style="display:flex;align-items:center;gap:5px;font:600 12px Archivo,sans-serif;color:#5B5D62"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#17181B" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M1.6 7.1 4.7 10.2 11.4 3"></path></svg>You're in</div>
+      </div>
+      <div style="height:8px"></div>
+    </div>
+  </div>
+  <div style="display:flex;padding:12px 26px 26px;background:#FAF8F4;border-top:1px solid rgba(23,24,27,.08)">
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#FF7E00"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.4" y="3.2" width="16.2" height="14.4" rx="3.4"></rect><path d="M1.4 7.6h16.2M6 1.4v3.4M13 1.4v3.4"></path></svg></div><div style="margin-top:3px;font:700 10.5px Archivo,sans-serif;color:#FF7E00">Mine</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 17.4c3.6-4.4 6.2-7.4 6.2-10.3A6.2 6.2 0 0 0 2.3 7.1c0 2.9 2.6 5.9 6.2 10.3z"></path><circle cx="8.5" cy="7" r="2.2"></circle></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Map</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="7.4" cy="7.4" r="5.6"></circle><path d="M11.6 11.6 16.2 16.2"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Explore</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="5.6" r="4"></circle><path d="M1.8 17.4c0-3.6 3.2-5.8 7.2-5.8s7.2 2.2 7.2 5.8"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">You</div></div>
+  </div>
+</div>
+</div>
+
+<!-- 03 MAP -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">03</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Map</span></div>
+<div style="width:390px;height:844px;background:#E3DED4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column;position:relative">
+  <div style="position:absolute;inset:0;background:#E3DED4">
+    <div style="position:absolute;left:-40px;top:180px;width:520px;height:14px;background:#F2EEE7;transform:rotate(-9deg)"></div>
+    <div style="position:absolute;left:-40px;top:400px;width:520px;height:10px;background:#F2EEE7;transform:rotate(4deg)"></div>
+    <div style="position:absolute;left:120px;top:-40px;width:12px;height:900px;background:#F2EEE7;transform:rotate(7deg)"></div>
+    <div style="position:absolute;left:290px;top:-40px;width:8px;height:900px;background:#F2EEE7;transform:rotate(-5deg)"></div>
+    <div style="position:absolute;left:-60px;top:520px;width:340px;height:200px;background:#CFD9D6;border-radius:40% 60% 50% 40%"></div>
+    <div style="position:absolute;right:16px;top:250px;width:150px;height:130px;background:#D7DCC9;border-radius:26px"></div>
+  </div>
+  <div style="position:relative;display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#4A4C52"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="position:relative;padding:14px 18px 0">
+    <div style="background:#FFFFFF;border-radius:18px;padding:13px 16px;box-shadow:0 2px 4px rgba(23,24,27,.08),0 14px 30px -18px rgba(23,24,27,.4);display:flex;justify-content:space-between;align-items:center">
+      <div><div style="display:flex;align-items:center;gap:6px;font:600 16px Archivo,sans-serif;color:#17181B">Copenhagen <span style="font-size:11px;color:#85878E"><svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.2 1.4 5.5 5.6l4.3-4.2"></path></svg></span></div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">31 tonight · 1.204 out</div></div>
+      <div style="font:600 12.5px Archivo,sans-serif;color:#D34F00;background:#FFF1E4;border-radius:10px;padding:7px 10px">Change city</div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+      <div style="font:600 12.5px Archivo,sans-serif;color:#FAF8F4;background:#17181B;border-radius:999px;padding:8px 13px;box-shadow:0 4px 10px -4px rgba(23,24,27,.5)">Now</div>
+      <div style="font:600 12.5px Archivo,sans-serif;color:#4A4C52;background:rgba(255,255,255,.92);border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(23,24,27,.1)">Under 1 km</div>
+      <div style="font:600 12.5px Archivo,sans-serif;color:#4A4C52;background:rgba(255,255,255,.92);border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(23,24,27,.1)">Free</div>
+      <div style="font:600 12.5px Archivo,sans-serif;color:#4A4C52;background:rgba(255,255,255,.92);border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(23,24,27,.1)">Friends</div>
+    </div>
+  </div>
+  <div style="position:relative;flex:1">
+    <div style="position:absolute;left:60px;top:60px;background:#FF7E00;color:#FFFFFF;font:700 13px Archivo,sans-serif;border-radius:14px;padding:8px 12px;box-shadow:0 8px 18px -8px rgba(211,79,0,.8)">Bakken · now</div>
+    <div style="position:absolute;left:210px;top:130px;width:44px;height:44px;border-radius:50%;background:#17181B;color:#FAF8F4;display:flex;align-items:center;justify-content:center;font:700 15px Archivo,sans-serif;box-shadow:0 10px 20px -8px rgba(23,24,27,.7)">8</div>
+    <div style="position:absolute;left:96px;top:210px;width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:4px solid #DF7234;box-shadow:0 4px 10px -3px rgba(23,24,27,.4)"></div>
+    <div style="position:absolute;left:250px;top:240px;width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:4px solid #DF7234;box-shadow:0 4px 10px -3px rgba(23,24,27,.4)"></div>
+    <div style="position:absolute;left:160px;top:255px;background:#FFFFFF;border:2px solid #17181B;color:#17181B;font:700 12px Archivo,sans-serif;border-radius:12px;padding:6px 10px;box-shadow:0 8px 18px -8px rgba(23,24,27,.5)">You're going ✓</div>
+    <div style="position:absolute;right:18px;top:200px;width:44px;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font:600 16px Archivo,sans-serif;color:#4A4C52;box-shadow:0 2px 4px rgba(23,24,27,.1),0 10px 22px -12px rgba(23,24,27,.5)"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1v2.4M9 14.6V17M1 9h2.4M14.6 9H17"></path><circle cx="9" cy="9" r="4.4"></circle><circle cx="9" cy="9" r="1.3" fill="currentColor" stroke="none"></circle></svg></div>
+  </div>
+  <div style="position:relative;background:#FAF8F4;border-radius:26px 26px 34px 34px;padding:14px 20px 0;box-shadow:0 -10px 40px -18px rgba(23,24,27,.5)">
+    <div style="width:38px;height:4px;border-radius:2px;background:rgba(23,24,27,.18);margin:0 auto 14px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font:400 22px/1 'Instrument Serif',serif;color:#17181B">Around you now</div><div style="font:500 12.5px Archivo,sans-serif;color:#85878E">Nearest first</div></div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.07)">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Vinyl night at Bakken</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E;white-space:nowrap">300 m · started 20 min ago</div></div>
+        <div style="flex:none;display:flex;align-items:center;gap:5px;font:600 12px Archivo,sans-serif;color:#5B5D62"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#17181B" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M1.6 7.1 4.7 10.2 11.4 3"></path></svg>You're in</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.07)">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Late gallery, Gl. Strand</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#D34F00;white-space:nowrap">550 m · starts 21:00</div></div>
+        <div style="flex:none;font:700 12.5px Archivo,sans-serif;color:#17181B;background:#FF7E00;border-radius:10px;padding:9px 13px;box-shadow:0 6px 14px -7px rgba(255,126,0,.9)">I'm going</div>
+      </div>
+    </div>
+    <div style="display:flex;padding:12px 6px 26px;margin-top:6px">
+      <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.4" y="3.2" width="16.2" height="14.4" rx="3.4"></rect><path d="M1.4 7.6h16.2M6 1.4v3.4M13 1.4v3.4"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Mine</div></div>
+      <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#FF7E00"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 17.4c3.6-4.4 6.2-7.4 6.2-10.3A6.2 6.2 0 0 0 2.3 7.1c0 2.9 2.6 5.9 6.2 10.3z"></path><circle cx="8.5" cy="7" r="2.2"></circle></svg></div><div style="margin-top:3px;font:700 10.5px Archivo,sans-serif;color:#FF7E00">Map</div></div>
+      <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="7.4" cy="7.4" r="5.6"></circle><path d="M11.6 11.6 16.2 16.2"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Explore</div></div>
+      <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="5.6" r="4"></circle><path d="M1.8 17.4c0-3.6 3.2-5.8 7.2-5.8s7.2 2.2 7.2 5.8"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">You</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 04 EXPLORE -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">04</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Explore</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#85878E"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="padding:16px 22px 12px">
+    <div style="display:flex;gap:10px">
+      <div style="flex:1;background:#FFFFFF;border-radius:14px;padding:13px 15px;font:500 14.5px Archivo,sans-serif;color:#A9ABB1;box-shadow:0 1px 2px rgba(23,24,27,.07)">Search events or places</div>
+      <div style="width:46px;border-radius:14px;background:#17181B;color:#FAF8F4;display:flex;align-items:center;justify-content:center;font:700 15px Archivo,sans-serif;box-shadow:0 8px 18px -10px rgba(23,24,27,.7)">#</div>
+    </div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;padding:0 22px">
+    <div style="margin:6px 0 10px"><div style="font:400 21px/1.2 'Instrument Serif',serif;color:#17181B">Because you went to 3 markets</div></div>
+    <div onScroll="{{ onMarketsScroll }}" style="display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px 10px">
+      <div style="width:135px;flex:none;background:#FFFFFF;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(23,24,27,.06),0 6px 14px -10px rgba(23,24,27,.35)">
+        <div style="height:80px;background:#E3DED4;display:flex;align-items:flex-end;padding:8px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">market photo</span></div>
+        <div style="padding:11px 12px 13px"><div style="font:600 14px/1.3 Archivo,sans-serif;color:#17181B">Flea market, Sønder Blvd</div><div style="margin-top:5px;font:500 12px Archivo,sans-serif;color:#85878E">600 m · Sat</div></div>
+      </div>
+      <div style="width:135px;flex:none;background:#FFFFFF;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(23,24,27,.06),0 6px 14px -10px rgba(23,24,27,.35)">
+        <div style="height:80px;background:#E3DED4;display:flex;align-items:flex-end;padding:8px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">market photo</span></div>
+        <div style="padding:11px 12px 13px"><div style="font:600 14px/1.3 Archivo,sans-serif;color:#17181B">Ceramics fair, Refshaleøen</div><div style="margin-top:5px;font:500 12px Archivo,sans-serif;color:#85878E">3,4 km · Sun</div></div>
+      </div>
+      <div style="width:135px;flex:none;background:#FFFFFF;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(23,24,27,.06),0 6px 14px -10px rgba(23,24,27,.35)">
+        <div style="height:80px;background:#E3DED4;display:flex;align-items:flex-end;padding:8px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">market photo</span></div>
+        <div style="padding:11px 12px 13px"><div style="font:600 14px/1.3 Archivo,sans-serif;color:#17181B">Producers' market, Torvehallerne</div><div style="margin-top:5px;font:500 12px Archivo,sans-serif;color:#85878E">1,2 km · Sat</div></div>
+      </div>
+      <div style="width:135px;flex:none;background:#FFFFFF;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(23,24,27,.06),0 6px 14px -10px rgba(23,24,27,.35)">
+        <div style="height:80px;background:#E3DED4;display:flex;align-items:flex-end;padding:8px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">market photo</span></div>
+        <div style="padding:11px 12px 13px"><div style="font:600 14px/1.3 Archivo,sans-serif;color:#17181B">Plant swap, Nørrebrohallen</div><div style="margin-top:5px;font:500 12px Archivo,sans-serif;color:#85878E">2,6 km · Sun</div></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:2px">
+      <div style="width:56px;height:3px;border-radius:2px;background:rgba(23,24,27,.12);overflow:hidden">
+        <div style="width:40%;height:100%;border-radius:2px;background:rgba(23,24,27,.42);transition:transform .12s ease;transform:{{ marketsThumbShift }}"></div>
+      </div>
+    </div>
+
+    <div style="margin:24px 0 10px"><div style="font:400 21px/1.2 'Instrument Serif',serif;color:#17181B">10 friends are going</div></div>
+    <div style="background:#17181B;border-radius:20px;padding:18px;color:#F7F5F1;box-shadow:0 14px 30px -18px rgba(23,24,27,.6)">
+      <div style="font:600 18px/1.25 Archivo,sans-serif">Warehouse party, Sydhavn</div>
+      <div style="margin-top:5px;font:500 13px Archivo,sans-serif;color:rgba(247,245,241,.55)">Sat 23:00 · 4,1 km · 240 going</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
+        <div style="display:flex">
+          <div style="width:26px;height:26px;border-radius:50%;background:#FCBA70;border:2px solid #17181B"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#DF7234;border:2px solid #17181B;margin-left:-9px"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#F49939;border:2px solid #17181B;margin-left:-9px"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#5B5D62;border:2px solid #17181B;margin-left:-9px;display:flex;align-items:center;justify-content:center;font:700 10px Archivo,sans-serif;color:#F7F5F1">+7</div>
+        </div>
+        <div style="font:500 13px Archivo,sans-serif;color:rgba(247,245,241,.75)">Mia, Jonas, Sofie and 7 more</div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin:24px 0 10px">
+      <div style="font:400 21px/1.2 'Instrument Serif',serif;color:#17181B">Walkable in the next hour</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:40px;flex:none;text-align:center"><div style="font:400 19px/1 'Instrument Serif',serif;color:#D34F00">7</div><div style="font:600 9.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1">min</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Poetry basement, Blågårds</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">550 m · starts 21:15</div></div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:40px;flex:none;text-align:center"><div style="font:400 19px/1 'Instrument Serif',serif;color:#D34F00">11</div><div style="font:600 9.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1">min</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Sauna sunset, Islands Brygge</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">900 m · starts 21:30</div></div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="width:40px;flex:none;text-align:center"><div style="font:400 19px/1 'Instrument Serif',serif;color:#D34F00">14</div><div style="font:600 9.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1">min</div></div>
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Table tennis league</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">1,1 km · starts 21:00</div></div>
+      </div>
+    </div>
+    <div style="height:24px"></div>
+  </div>
+  <div style="display:flex;padding:12px 26px 26px;border-top:1px solid rgba(23,24,27,.08)">
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.4" y="3.2" width="16.2" height="14.4" rx="3.4"></rect><path d="M1.4 7.6h16.2M6 1.4v3.4M13 1.4v3.4"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Mine</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 17.4c3.6-4.4 6.2-7.4 6.2-10.3A6.2 6.2 0 0 0 2.3 7.1c0 2.9 2.6 5.9 6.2 10.3z"></path><circle cx="8.5" cy="7" r="2.2"></circle></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">Map</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#FF7E00"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="7.4" cy="7.4" r="5.6"></circle><path d="M11.6 11.6 16.2 16.2"></path></svg></div><div style="margin-top:3px;font:700 10.5px Archivo,sans-serif;color:#FF7E00">Explore</div></div>
+    <div style="flex:1;text-align:center"><div style="font:600 17px Archivo,sans-serif;color:#A9ABB1"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="5.6" r="4"></circle><path d="M1.8 17.4c0-3.6 3.2-5.8 7.2-5.8s7.2 2.2 7.2 5.8"></path></svg></div><div style="margin-top:3px;font:600 10.5px Archivo,sans-serif;color:#A9ABB1">You</div></div>
+  </div>
+</div>
+</div>
+
+<!-- 05 EVENT WITH COVER -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">05</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Event · cover, undecided</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column">
+  <div style="position:relative;height:214px;flex:none;background:#D9D3C7;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#4A4C52"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+    <div style="display:flex;justify-content:space-between;padding:12px 18px">
+      <div style="width:38px;height:38px;border-radius:12px;background:rgba(250,248,244,.92);display:flex;align-items:center;justify-content:center;font:600 15px Archivo,sans-serif;color:#17181B;box-shadow:0 2px 6px rgba(23,24,27,.2)"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 1.5 1.5 8l6 6.5"></path></svg></div>
+      <div style="width:38px;height:38px;border-radius:12px;background:rgba(250,248,244,.92);display:flex;align-items:center;justify-content:center;font:600 15px Archivo,sans-serif;color:#17181B;box-shadow:0 2px 6px rgba(23,24,27,.2)"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 11.5V1.5M4 5l3.5-3.5L11 5M2 10.5v4a1.5 1.5 0 0 0 1.5 1.5h8a1.5 1.5 0 0 0 1.5-1.5v-4"></path></svg></div>
+    </div>
+    <div style="margin-top:auto;padding:0 18px 32px;display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;align-items:center;gap:7px;background:#FF7E00;color:#17181B;font:700 11.5px Archivo,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:7px 12px"><span style="width:6px;height:6px;border-radius:50%;background:#17181B"></span>Happening now</div>
+      <span style="font:600 11px Archivo,sans-serif;color:#8A8578">organizer cover</span>
+    </div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;background:#FAF8F4;border-radius:24px 24px 0 0;margin-top:-18px;position:relative;padding:20px 22px 0">
+    <div style="font:600 11px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">Copenhagen</div>
+    <div style="margin-top:8px;font:400 30px/1.12 'Instrument Serif',serif;color:#17181B">Vinyl night at Bakken</div>
+    <div style="margin-top:6px;font:500 14px Archivo,sans-serif;color:#5B5D62">Bakken KBH</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
+      <div style="display:flex">
+        <div style="width:28px;height:28px;border-radius:50%;background:#FCBA70;border:2px solid #FAF8F4"></div>
+        <div style="width:28px;height:28px;border-radius:50%;background:#DF7234;border:2px solid #FAF8F4;margin-left:-10px"></div>
+        <div style="width:28px;height:28px;border-radius:50%;background:#4A4C52;border:2px solid #FAF8F4;margin-left:-10px"></div>
+      </div>
+      <div style="flex:1;min-width:0;font:500 13.5px Archivo,sans-serif;color:#17181B;white-space:nowrap">64 going · <span style="color:#D34F00;font-weight:600">3 friends</span></div>
+      <div style="flex:none;font:700 12.5px Archivo,sans-serif;color:#D34F00;background:#FFF1E4;border-radius:10px;padding:8px 12px">Invite</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px">
+      <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="display:flex;align-items:center;gap:6px;font:600 10.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="7" cy="7" r="5.6"></circle><path d="M7 4.2V7l2.2 1.6"></path></svg>When</div><div style="margin-top:4px;font:600 14px Archivo,sans-serif;color:#17181B">Tonight 20:00–01:00</div></div>
+      <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="display:flex;align-items:center;gap:6px;font:600 10.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1.2" y="3.4" width="11.6" height="7.2" rx="2"></rect><circle cx="7" cy="7" r="1.7"></circle></svg>Price</div><div style="margin-top:4px;font:600 14px Archivo,sans-serif;color:#17181B">80 kr at the door</div></div>
+      <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="display:flex;align-items:center;gap:6px;font:600 10.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12.7c2.6-3.2 4.2-5.2 4.2-7A4.2 4.2 0 0 0 2.8 5.7c0 1.8 1.6 3.8 4.2 7z"></path><circle cx="7" cy="5.7" r="1.5"></circle></svg>Where</div><div style="margin-top:4px;font:600 14px Archivo,sans-serif;color:#17181B">Flæsketorvet 19–21</div></div>
+      <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="display:flex;align-items:center;gap:6px;font:600 10.5px Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#A9ABB1"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2.2 5.6v2.8M5.1 3.4v7.2M8 4.8v4.4M10.9 2.8v8.4"></path></svg>Vibe</div><div style="margin-top:4px;font:600 14px Archivo,sans-serif;color:#17181B">Loud, standing, cash bar</div></div>
+    </div>
+    <div style="margin-top:14px;padding-left:14px;border-left:3px solid #FF7E00;font:italic 400 16px/1.45 'Instrument Serif',serif;color:#3C3E42;text-wrap:pretty">“Only records the three of us bought this month. No lineup, no genre.”</div>
+    <div style="margin-top:14px;background:#E3DED4;border-radius:16px;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 16px">
+      <span style="font:600 11px Archivo,sans-serif;color:#8A8578">map</span>
+      <span style="background:#FAF8F4;border-radius:10px;padding:8px 11px;font:600 12.5px Archivo,sans-serif;color:#17181B;box-shadow:0 2px 6px rgba(23,24,27,.14)">12 min walk</span>
+    </div>
+    <div style="margin-top:16px;font:400 13.5px/1.6 Archivo,sans-serif;color:#4A4C52;text-wrap:pretty">Doors at eight, first record at half past. The back room stays quiet if you want to talk, the front one does not. Cash bar, no cloakroom, and the last DJ decides when it ends. <span style="color:#D34F00;font-weight:600">More</span></div>
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(23,24,27,.08)">
+      <div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">The feed</div>
+      <div style="margin-top:10px;background:#FFFFFF;border:1px dashed rgba(23,24,27,.16);border-radius:16px;padding:13px 14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:26px;height:26px;flex:none;border-radius:50%;background:#4A4C52"></div>
+          <div style="flex:1;font:400 13.5px Archivo,sans-serif;color:#A9ABB1">Say something to the 64 going…</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:11px;border-top:1px solid rgba(23,24,27,.07)">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12.5px Archivo,sans-serif;color:#5B5D62"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2.6" width="14" height="11" rx="2.6"></rect><path d="M1 10.4l3.6-3.2 3.4 3M9.6 8.2l1.8-1.6 3.6 3.2"></path><circle cx="10.6" cy="5.6" r="1.1"></circle></svg>Add a photo</div>
+          <div style="font:600 12.5px Archivo,sans-serif;color:#D34F00;background:#FFF1E4;border:1px solid rgba(223,114,52,.35);border-radius:999px;padding:7px 15px">Post it</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#DF7234"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Bakken KBH</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">2 h ago</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">Queue is short right now if you want to skip it later.</div>
+      </div>
+      <div style="margin-top:8px;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#FCBA70"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Mia</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">Yesterday</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">We're meeting at the corner bar at 19:30 first.</div>
+      </div>
+      <div style="margin-top:8px;background:#FFFFFF;border-radius:16px;padding:14px 16px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#F49939"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Bakken KBH</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">Last week</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">Last month's crowd, same back room.</div>
+        <div style="margin-top:10px;background:#E3DED4;border-radius:12px;height:120px;display:flex;align-items:flex-end;padding:10px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">photo from the night</span></div>
+      </div>
+    </div>
+    <div style="height:24px"></div>
+  </div>
+  <div style="flex:none;background:#FAF8F4;padding:14px 22px 26px;border-top:1px solid rgba(23,24,27,.08);display:flex;gap:10px;box-shadow:0 -8px 24px -16px rgba(23,24,27,.4)">
+    <div style="width:104px;flex:none;height:56px;border:1.5px solid rgba(23,24,27,.2);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;font:600 14.5px Archivo,sans-serif;color:#17181B">Interested</div>
+    <div style="flex:1;height:56px;background:#FF7E00;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#17181B;box-shadow:0 10px 24px -10px rgba(255,126,0,.75)"><div style="font:700 15.5px Archivo,sans-serif">I'm going!</div><div style="margin-top:1px;font:500 11.5px Archivo,sans-serif;color:rgba(23,24,27,.65)">you'll be number 65</div></div>
+  </div>
+</div>
+</div>
+
+<!-- 06 EVENT NO COVER -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">06</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Event · no cover, answered</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#85878E"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="position:relative;z-index:2;background:#FAF8F4;display:flex;justify-content:space-between;align-items:center;padding:12px 18px 10px">
+    <div style="width:38px;height:38px;border-radius:12px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font:600 15px Archivo,sans-serif;color:#17181B;box-shadow:0 1px 3px rgba(23,24,27,.12)"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 1.5 1.5 8l6 6.5"></path></svg></div>
+    <div style="font:700 12.5px Archivo,sans-serif;letter-spacing:.16em;color:#85878E">CODE · 7KQ2ZF</div>
+    <div style="width:38px;height:38px;border-radius:12px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font:600 15px Archivo,sans-serif;color:#17181B;box-shadow:0 1px 3px rgba(23,24,27,.12)"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 11.5V1.5M4 5l3.5-3.5L11 5M2 10.5v4a1.5 1.5 0 0 0 1.5 1.5h8a1.5 1.5 0 0 0 1.5-1.5v-4"></path></svg></div>
+  </div>
+  <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;padding:18px 22px 0">
+    <div style="font:600 11px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">Private · Nørrebro</div>
+    <div style="margin-top:8px;font:400 32px/1.1 'Instrument Serif',serif;color:#17181B">Rooftop dinner, 12 seats</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
+      <div style="display:flex">
+        <div style="width:28px;height:28px;border-radius:50%;background:#FCBA70;border:2px solid #FAF8F4"></div>
+        <div style="width:28px;height:28px;border-radius:50%;background:#DF7234;border:2px solid #FAF8F4;margin-left:-10px"></div>
+        <div style="width:28px;height:28px;border-radius:50%;background:#4A4C52;border:2px solid #FAF8F4;margin-left:-10px"></div>
+      </div>
+      <div style="flex:1;min-width:0;font:500 13.5px Archivo,sans-serif;color:#17181B;white-space:nowrap">9 of 12 · <span style="color:#D34F00;font-weight:600">4 friends</span></div><div style="flex:none;display:flex;align-items:center;gap:6px;background:#FFF1E4;border-radius:999px;padding:6px 11px;font:600 11.5px Archivo,sans-serif;color:#D34F00"><svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1.6 7.1 4.7 10.2 11.4 3"></path></svg>Accepted</div>
+    </div>
+    <div style="margin-top:16px;background:#FFFFFF;border-radius:20px;padding:4px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 14px 30px -20px rgba(23,24,27,.4)">
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(23,24,27,.07)"><span style="display:inline-flex;align-items:center;gap:8px;font:500 13.5px Archivo,sans-serif;color:#85878E"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="5.6"></circle><path d="M7 4.2V7l2.2 1.6"></path></svg>When</span><span style="font:600 14px Archivo,sans-serif;color:#17181B">Fri 18 Oct, 19:00</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(23,24,27,.07)"><span style="display:inline-flex;align-items:center;gap:8px;font:500 13.5px Archivo,sans-serif;color:#85878E"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12.7c2.6-3.2 4.2-5.2 4.2-7A4.2 4.2 0 0 0 2.8 5.7c0 1.8 1.6 3.8 4.2 7z"></path><circle cx="7" cy="5.7" r="1.5"></circle></svg>Where</span><span style="font:600 14px Archivo,sans-serif;color:#17181B">Some street and nr 1</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(23,24,27,.07)"><span style="display:inline-flex;align-items:center;gap:8px;font:500 13.5px Archivo,sans-serif;color:#85878E"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.2" y="3.4" width="11.6" height="7.2" rx="2"></rect><circle cx="7" cy="7" r="1.7"></circle></svg>Price</span><span style="font:600 14px Archivo,sans-serif;color:#17181B">150 kr, split for food</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(23,24,27,.07)"><span style="display:inline-flex;align-items:center;gap:8px;font:500 13.5px Archivo,sans-serif;color:#85878E"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.2 5.6v2.8M5.1 3.4v7.2M8 4.8v4.4M10.9 2.8v8.4"></path></svg>Vibe</span><span style="font:600 14px Archivo,sans-serif;color:#17181B">Seated, slow, bring wine</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0"><span style="display:inline-flex;align-items:center;gap:8px;font:500 13.5px Archivo,sans-serif;color:#85878E"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="4.6" r="2.8"></circle><path d="M1.9 12.6c0-2.6 2.3-4.1 5.1-4.1s5.1 1.5 5.1 4.1"></path></svg>Host</span><span style="font:600 14px Archivo,sans-serif;color:#17181B">Mia · 14 events</span></div>
+    </div>
+    <div style="margin-top:18px;padding-left:16px;border-left:3px solid #FF7E00;font:italic 400 17px/1.5 'Instrument Serif',serif;color:#3C3E42;text-wrap:pretty">“One long table, whatever the market had this morning, and we eat until the candles run out.”</div>
+    <div style="margin-top:16px;background:#E3DED4;border-radius:16px;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 16px">
+      <span style="font:600 11px Archivo,sans-serif;color:#8A8578">map</span>
+      <span style="background:#FAF8F4;border-radius:10px;padding:8px 11px;font:600 12.5px Archivo,sans-serif;color:#17181B;box-shadow:0 2px 6px rgba(23,24,27,.14)">18 min walk</span>
+    </div>
+    <div style="margin-top:16px;font:400 13.5px/1.6 Archivo,sans-serif;color:#4A4C52;text-wrap:pretty">Twelve chairs, one long table on the roof of my building. I cook whatever the market had that morning, so tell me if you can't eat something. Blankets are there, the lift only goes to the fifth floor. <span style="color:#D34F00;font-weight:600">More</span></div>
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(23,24,27,.08)">
+      <div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#85878E">The feed</div>
+      <div style="margin-top:10px;background:#FFFFFF;border:1px dashed rgba(23,24,27,.16);border-radius:16px;padding:13px 14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:26px;height:26px;flex:none;border-radius:50%;background:#4A4C52"></div>
+          <div style="flex:1;font:400 13.5px Archivo,sans-serif;color:#A9ABB1">Say something to the 9 going…</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:11px;border-top:1px solid rgba(23,24,27,.07)">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12.5px Archivo,sans-serif;color:#5B5D62"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2.6" width="14" height="11" rx="2.6"></rect><path d="M1 10.4l3.6-3.2 3.4 3M9.6 8.2l1.8-1.6 3.6 3.2"></path><circle cx="10.6" cy="5.6" r="1.1"></circle></svg>Add a photo</div>
+          <div style="font:600 12.5px Archivo,sans-serif;color:#D34F00;background:#FFF1E4;border:1px solid rgba(223,114,52,.35);border-radius:999px;padding:7px 15px">Post it</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#FCBA70"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Mia</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">4 h ago</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">Three seats left. Bring wine, I have the rest.</div>
+      </div>
+      <div style="margin-top:8px;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#4A4C52"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Jonas</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">Yesterday</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">I'll bring the folding chairs again.</div>
+      </div>
+      <div style="margin-top:8px;background:#FFFFFF;border-radius:16px;padding:14px 16px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="display:flex;align-items:center;gap:9px"><div style="width:26px;height:26px;border-radius:50%;background:#FCBA70"></div><div style="font:600 13px Archivo,sans-serif;color:#17181B">Mia</div><div style="font:500 11.5px Archivo,sans-serif;color:#A9ABB1">Last month</div></div>
+        <div style="margin-top:8px;font:400 13.5px/1.55 Archivo,sans-serif;color:#4A4C52">The table from the last one, before it rained.</div>
+        <div style="margin-top:10px;background:#E3DED4;border-radius:12px;height:120px;display:flex;align-items:flex-end;padding:10px"><span style="font:600 10.5px Archivo,sans-serif;color:#8A8578">photo from the last dinner</span></div>
+      </div>
+    </div>
+    <div style="height:24px"></div>
+  </div>
+  <div style="flex:none;background:#FAF8F4;padding:14px 22px 26px;border-top:1px solid rgba(23,24,27,.08);display:flex;gap:10px;align-items:center;box-shadow:0 -8px 24px -16px rgba(23,24,27,.4)">
+    <div style="width:104px;flex:none;height:56px;border:1.5px solid rgba(23,24,27,.2);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#17181B"><div style="font:600 14.5px Archivo,sans-serif">Going ✓</div><div style="margin-top:1px;font:500 11px Archivo,sans-serif;color:#85878E">Tap to change</div></div>
+    <div style="flex:1;height:56px;background:#FF7E00;border-radius:16px;display:flex;align-items:center;justify-content:center;font:700 15px Archivo,sans-serif;color:#17181B;box-shadow:0 10px 24px -10px rgba(255,126,0,.75)">Invite</div>
+  </div>
+</div>
+</div>
+
+<!-- 07 CITY LOGGED OUT -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">07</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">City page · logged out</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#85878E"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+  <div style="padding:22px 22px 0">
+    <div style="font:italic 400 26px/1 'Instrument Serif',serif;color:#17181B">Happening</div>
+    <div style="margin-top:14px;font:400 27px/1.15 'Instrument Serif',serif;color:#17181B">Right now in your city</div>
+    <div style="display:flex;gap:10px;margin-top:16px">
+      <div style="flex:1;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="font:400 28px/1 'Instrument Serif',serif;color:#17181B">31</div><div style="margin-top:5px;font:500 11.5px Archivo,sans-serif;color:#85878E">events tonight</div></div>
+      <div style="flex:1;background:#FFFFFF;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(23,24,27,.06)"><div style="font:400 28px/1 'Instrument Serif',serif;color:#17181B">1.204</div><div style="margin-top:5px;font:500 11.5px Archivo,sans-serif;color:#85878E">people out</div></div>
+    </div>
+  </div>
+  <div style="flex:1;overflow:hidden;padding:20px 22px 0">
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Vinyl night at Bakken</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">Vesterbro · 64 going</div></div>
+        <div style="display:flex;align-items:center;gap:6px;font:700 11.5px Archivo,sans-serif;color:#D34F00;background:#FFF1E4;border-radius:8px;padding:6px 9px"><span style="width:5px;height:5px;border-radius:50%;background:#FF7E00"></span>Now</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Harbour swim &amp; sauna</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">Islands Brygge · 42 going</div></div>
+        <div style="font:600 12px Archivo,sans-serif;color:#4A4C52">20:30</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(23,24,27,.06)">
+        <div style="flex:1;min-width:0"><div style="font:600 15px Archivo,sans-serif;color:#17181B">Open mic, Absalon</div><div style="margin-top:3px;font:500 12.5px Archivo,sans-serif;color:#85878E">Sønder Blvd · 30 going</div></div>
+        <div style="font:600 12px Archivo,sans-serif;color:#4A4C52">21:00</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;text-align:center;font:600 13px Archivo,sans-serif;color:#D34F00">+28 more — sign in to filter</div>
+    <div style="margin-top:18px;background:#E3DED4;border-radius:18px;height:130px;position:relative;overflow:hidden">
+      <div style="position:absolute;left:-20px;top:60px;width:440px;height:10px;background:#F2EEE7;transform:rotate(-6deg)"></div>
+      <div style="position:absolute;left:120px;top:-20px;width:9px;height:200px;background:#F2EEE7;transform:rotate(8deg)"></div>
+      <div style="position:absolute;left:70px;top:40px;width:14px;height:14px;border-radius:50%;background:#FFFFFF;border:4px solid #FF7E00"></div>
+      <div style="position:absolute;left:210px;top:78px;width:14px;height:14px;border-radius:50%;background:#FFFFFF;border:4px solid #DF7234"></div>
+      <div style="position:absolute;right:12px;bottom:12px;background:#FAF8F4;border-radius:10px;padding:7px 10px;font:600 12px Archivo,sans-serif;color:#17181B;box-shadow:0 2px 6px rgba(23,24,27,.16)">Open map</div>
+    </div>
+    <div style="margin-top:18px;background:#FFF1E4;border-radius:16px;padding:14px 16px;font:400 13.5px/1.6 Archivo,sans-serif;color:#7A5334;text-wrap:pretty">Browsing is free. Saving events, RSVPing and inviting friends need an account.</div>
+  </div>
+  <div style="flex:none;padding:14px 22px 26px">
+    <div style="background:#FF7E00;border-radius:16px;padding:17px;text-align:center;font:700 16px Archivo,sans-serif;color:#17181B;box-shadow:0 10px 24px -10px rgba(255,126,0,.75)">Create account</div>
+    <div style="margin-top:12px;text-align:center;font:600 14px Archivo,sans-serif;color:#4A4C52">Log in</div>
+  </div>
+</div>
+</div>
+
+<!-- 08 JOIN BY CODE -->
+<div style="width:390px;flex:none">
+<div style="display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="font:700 11px Archivo,sans-serif;color:#FFFFFF;background:#FF7E00;border-radius:6px;padding:3px 7px">08</span><span style="font:600 13.5px Archivo,sans-serif;color:#17181B">Join by code</span></div>
+<div style="width:390px;height:844px;background:#FAF8F4;border-radius:34px;overflow:hidden;box-shadow:0 2px 4px rgba(23,24,27,.08),0 30px 60px -24px rgba(23,24,27,.45);display:flex;flex-direction:column;position:relative">
+  <div style="filter:blur(1.5px);opacity:.5;display:flex;flex-direction:column;height:100%">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font:600 12.5px Archivo,sans-serif;color:#85878E"><span>9:41</span><span><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" style="vertical-align:middle"><rect x="0" y="7.5" width="3" height="3.5" rx="1"></rect><rect x="4.6" y="5.5" width="3" height="5.5" rx="1"></rect><rect x="9.2" y="3" width="3" height="8" rx="1"></rect><rect x="13.8" y="0" width="3" height="11" rx="1"></rect></svg> <svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="vertical-align:middle"><path d="M1 4.2A9.5 9.5 0 0 1 14 4.2"></path><path d="M3.6 6.8a6 6 0 0 1 7.8 0"></path><path d="M6.3 9.3a2.4 2.4 0 0 1 2.4 0"></path></svg> <svg width="25" height="12" viewBox="0 0 25 12" fill="none" style="vertical-align:middle"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"></rect><rect x="2.4" y="2.4" width="15" height="7.2" rx="1.8" fill="currentColor"></rect><path d="M23.4 4.3v3.4a1.9 1.9 0 0 0 0-3.4z" fill="currentColor" fill-opacity=".45"></path></svg></span></div>
+    <div style="padding:18px 22px"><div style="font:400 30px/1 'Instrument Serif',serif;color:#17181B">Your week</div><div style="margin-top:16px;background:#FFFFFF;border-radius:18px;height:120px"></div><div style="margin-top:10px;background:#FFFFFF;border-radius:16px;height:70px"></div><div style="margin-top:10px;background:#FFFFFF;border-radius:16px;height:70px"></div></div>
+  </div>
+  <div style="position:absolute;inset:0;background:rgba(23,24,27,.42)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;background:#FAF8F4;border-radius:28px 28px 34px 34px;padding:18px 22px 30px;box-shadow:0 -16px 50px -14px rgba(23,24,27,.6)">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="width:34px;height:34px;border-radius:11px;background:rgba(23,24,27,.06);display:flex;align-items:center;justify-content:center;font:600 14px Archivo,sans-serif;color:#4A4C52"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M1.6 1.6l10.8 10.8M12.4 1.6 1.6 12.4"></path></svg></div>
+      <div style="font:600 13px Archivo,sans-serif;color:#D34F00">Paste link instead</div>
+    </div>
+    <div style="margin-top:16px;font:400 28px/1.15 'Instrument Serif',serif;color:#17181B">Enter the event code</div>
+    <div style="margin-top:8px;font:400 13.5px/1.6 Archivo,sans-serif;color:#5B5D62;text-wrap:pretty">Private events never appear in search. A code is the only way in.</div>
+    <div style="display:flex;gap:9px;margin-top:20px">
+      <div style="flex:1;height:62px;border-radius:14px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.08);display:flex;align-items:center;justify-content:center;font:700 24px Archivo,sans-serif;color:#17181B">7</div>
+      <div style="flex:1;height:62px;border-radius:14px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.08);display:flex;align-items:center;justify-content:center;font:700 24px Archivo,sans-serif;color:#17181B">K</div>
+      <div style="flex:1;height:62px;border-radius:14px;background:#FFFFFF;box-shadow:0 1px 2px rgba(23,24,27,.08);display:flex;align-items:center;justify-content:center;font:700 24px Archivo,sans-serif;color:#17181B">Q</div>
+      <div style="flex:1;height:62px;border-radius:14px;background:#FFFFFF;border:2px solid #FF7E00;box-shadow:0 0 0 4px rgba(255,126,0,.18);display:flex;align-items:center;justify-content:center"><div style="width:2px;height:26px;background:#FF7E00"></div></div>
+      <div style="flex:1;height:62px;border-radius:14px;background:rgba(23,24,27,.05)"></div>
+      <div style="flex:1;height:62px;border-radius:14px;background:rgba(23,24,27,.05)"></div>
+    </div>
+    <div style="margin-top:18px;background:#FFFFFF;border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(23,24,27,.06),0 16px 34px -20px rgba(23,24,27,.45)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><div style="font:700 10.5px Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D34F00">Code matched</div><div style="font:600 11px Archivo,sans-serif;color:#85878E;background:rgba(23,24,27,.06);border-radius:7px;padding:4px 7px">Private</div></div>
+      <div style="margin-top:10px;font:600 17px Archivo,sans-serif;color:#17181B">Rooftop dinner, 12 seats</div>
+      <div style="margin-top:4px;font:500 13px Archivo,sans-serif;color:#85878E">Fri 18 Oct · 19:00 · 9 going</div>
+    </div>
+    <div style="margin-top:14px;background:#FF7E00;border-radius:16px;padding:17px;text-align:center;font:700 16px Archivo,sans-serif;color:#17181B;box-shadow:0 10px 24px -10px rgba(255,126,0,.75)">Join this event</div>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { invitesP: 0, marketsP: 0 };
+  track(key) {
+    return (e) => {
+      const el = e.currentTarget;
+      const max = el.scrollWidth - el.clientWidth;
+      this.setState({ [key]: max > 0 ? el.scrollLeft / max : 0 });
+    };
+  }
+  renderVals() {
+    return {
+      onInvitesScroll: this.track("invitesP"),
+      onMarketsScroll: this.track("marketsP"),
+      invitesThumbShift: "translateX(" + this.state.invitesP * 100 + "%)",
+      marketsThumbShift: "translateX(" + this.state.marketsP * 150 + "%)",
+    };
+  }
+}
+</script>
+</body>
+</html>
