@@ -31,10 +31,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,10 +48,28 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
+  # Material and Cupertino are intentionally not used; UI is built from
+  # package:flutter/widgets.dart (see lib/theme and lib/ui).
+
+  # From Google Fonts, SIL Open Font License (see assets/fonts/OFL-*.txt).
+  # Family names must match AppFonts in lib/theme/app_theme.dart.
+  fonts:
+    - family: Archivo
+      fonts:
+        - asset: assets/fonts/Archivo-Regular.ttf
+        - asset: assets/fonts/Archivo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Archivo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Archivo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Archivo-ExtraBold.ttf
+          weight: 800
+    - family: Instrument Serif
+      fonts:
+        - asset: assets/fonts/InstrumentSerif-Regular.ttf
+        - asset: assets/fonts/InstrumentSerif-Italic.ttf
+          style: italic
 
   # To add assets to your application, add an assets section, like this:
   # assets:

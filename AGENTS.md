@@ -4,9 +4,12 @@
 
 ## APP
 
+- The Flutter app lives in `happening_app/`.
 - Dont build unless told so. Only type check.
 
-### Component library
+### UI
 
-- This project uses the [shadcn/ui](https://sunarya-thito.github.io/shadcn_flutter/) port for Flutter.
-- There is an [llms-full.txt](https://sunarya-thito.github.io/shadcn_flutter/llms-full.txt) file available for agents.
+- No UI library. Do not import `package:flutter/material.dart` or `package:flutter/cupertino.dart`; use `package:flutter/widgets.dart` only.
+- The app root is a `WidgetsApp`, not `MaterialApp`.
+- Design tokens (colors, text styles, spacing, radius) live in `happening_app/lib/theme/app_theme.dart`. Read them with `AppTheme.of(context)`. Do not hardcode colors or sizes in widgets; add a token instead.
+- Reusable components live in `happening_app/lib/ui/`. Check there before building a new one, and put new shared components there.
