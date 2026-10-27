@@ -28,8 +28,11 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  dio: ^5.11.1
   flutter:
     sdk: flutter
+  provider: ^6.1.5+1
+  web_socket_channel: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -49,10 +52,10 @@ dev_dependencies:
 flutter:
 
   # Material and Cupertino are intentionally not used; UI is built from
-  # package:flutter/widgets.dart (see lib/theme and lib/ui).
+  # package:flutter/widgets.dart (see lib/ui).
 
   # From Google Fonts, SIL Open Font License (see assets/fonts/OFL-*.txt).
-  # Family names must match AppFonts in lib/theme/app_theme.dart.
+  # Family names must match AppFonts in lib/ui/theme/app_theme.dart.
   fonts:
     - family: Archivo
       fonts:

@@ -91,6 +91,10 @@ abstract final class AppFonts {
 
 /// Text style tokens, already colored.
 ///
+/// Sizes follow Apple's Dynamic Type defaults (body around 16-17, minimum 11),
+/// not the smaller sizes drawn in design/Main_Design.html. Proportions between
+/// tokens match the design.
+///
 /// Eyebrows are uppercase in the design; call `.toUpperCase()` on the string,
 /// since Flutter has no text-transform.
 @immutable
@@ -104,40 +108,47 @@ class AppTextStyles {
         letterSpacing: -0.54,
         color: colors.graphite,
       ),
-      screenTitle = TextStyle(fontFamily: AppFonts.serif, fontSize: 30, height: 1, color: colors.graphite),
-      sectionHead = TextStyle(fontFamily: AppFonts.serif, fontSize: 21, height: 1.1, color: colors.graphite),
-      numeral = TextStyle(fontFamily: AppFonts.serif, fontSize: 30, height: 1, color: colors.graphite),
+      screenTitle = TextStyle(fontFamily: AppFonts.serif, fontSize: 34, height: 1, color: colors.graphite),
+      sectionHead = TextStyle(fontFamily: AppFonts.serif, fontSize: 22, height: 1.1, color: colors.graphite),
+      numeral = TextStyle(fontFamily: AppFonts.serif, fontSize: 32, height: 1, color: colors.graphite),
       pitch = TextStyle(
         fontFamily: AppFonts.serif,
         fontStyle: FontStyle.italic,
-        fontSize: 21,
+        fontSize: 22,
         height: 1.3,
         color: colors.graphite,
       ),
       cardTitle = TextStyle(
         fontFamily: AppFonts.sans,
-        fontSize: 19,
+        fontSize: 20,
         height: 1.25,
         fontWeight: FontWeight.w600,
         color: colors.graphite,
       ),
-      rowTitle = TextStyle(fontFamily: AppFonts.sans, fontSize: 15, fontWeight: FontWeight.w600, color: colors.graphite),
-      body = TextStyle(fontFamily: AppFonts.sans, fontSize: 13.5, height: 1.5, color: colors.ink2),
-      meta = TextStyle(fontFamily: AppFonts.sans, fontSize: 12.5, fontWeight: FontWeight.w500, color: colors.muted),
+      rowTitle = TextStyle(fontFamily: AppFonts.sans, fontSize: 17, fontWeight: FontWeight.w600, color: colors.graphite),
+      body = TextStyle(fontFamily: AppFonts.sans, fontSize: 16, height: 1.5, color: colors.ink2),
+      meta = TextStyle(fontFamily: AppFonts.sans, fontSize: 14, fontWeight: FontWeight.w500, color: colors.muted),
       eyebrow = TextStyle(
         fontFamily: AppFonts.sans,
-        fontSize: 10.5,
+        fontSize: 12,
         fontWeight: FontWeight.w700,
-        letterSpacing: 1.47,
+        letterSpacing: 1.68,
         color: colors.muted,
       ),
-      button = TextStyle(fontFamily: AppFonts.sans, fontSize: 15.5, fontWeight: FontWeight.w700, color: colors.graphite),
-      buttonSub = TextStyle(fontFamily: AppFonts.sans, fontSize: 11.5, fontWeight: FontWeight.w500, color: colors.muted);
+      rowState = TextStyle(fontFamily: AppFonts.sans, fontSize: 14, fontWeight: FontWeight.w600, color: colors.ink2),
+      button = TextStyle(fontFamily: AppFonts.sans, fontSize: 17, fontWeight: FontWeight.w700, color: colors.graphite),
+      buttonSmall = TextStyle(
+        fontFamily: AppFonts.sans,
+        fontSize: 15,
+        fontWeight: FontWeight.w700,
+        color: colors.graphite,
+      ),
+      buttonSub = TextStyle(fontFamily: AppFonts.sans, fontSize: 12, fontWeight: FontWeight.w500, color: colors.muted);
 
   /// Italic serif, splash only.
   final TextStyle wordmark;
 
-  /// 30–32 in the design.
+  /// Larger than the design's 30, per Apple's Large Title.
   final TextStyle screenTitle;
   final TextStyle sectionHead;
 
@@ -151,7 +162,13 @@ class AppTextStyles {
   final TextStyle body;
   final TextStyle meta;
   final TextStyle eyebrow;
+
+  /// A settled answer at the end of a row ("You're in").
+  final TextStyle rowState;
   final TextStyle button;
+
+  /// Label of a row pill button.
+  final TextStyle buttonSmall;
 
   /// The quiet consequence line under a button label.
   final TextStyle buttonSub;
@@ -199,6 +216,11 @@ abstract final class AppShadows {
   /// Glow under the primary ember button.
   static const ember = [
     BoxShadow(color: Color(0xBFFF7E00), offset: Offset(0, 10), blurRadius: 24, spreadRadius: -10),
+  ];
+
+  /// Glow under a row pill button.
+  static const emberSmall = [
+    BoxShadow(color: Color(0xE6FF7E00), offset: Offset(0, 6), blurRadius: 14, spreadRadius: -7),
   ];
 }
 

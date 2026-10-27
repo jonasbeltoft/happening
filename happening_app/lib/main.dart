@@ -1,10 +1,19 @@
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
-import 'theme/app_theme.dart';
-import 'ui/app_button.dart';
+import 'config/app_config.dart';
+import 'config/dependencies.dart';
+import 'ui/screens/events/events_screen.dart';
+import 'ui/screens/events/events_view_model.dart';
+import 'ui/theme/app_theme.dart';
 
 void main() {
-  runApp(const HappeningApp());
+  runApp(
+    MultiProvider(
+      providers: AppConfig.useFakeData ? fakeProviders : remoteProviders,
+      child: const HappeningApp(),
+    ),
+  );
 }
 
 class HappeningApp extends StatelessWidget {
@@ -24,68 +33,10 @@ class HappeningApp extends StatelessWidget {
         theme: theme,
         child: ColoredBox(color: theme.colors.chalk, child: child),
       ),
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
-
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.gutter, 18, AppSpacing.gutter, AppSpacing.gutter),
-        child: Column(
-          crossAxisAlignment: .start,
-          children: [
-            Text('Your week', style: theme.text.screenTitle),
-            const SizedBox(height: 6),
-            Text('Nothing planned yet', style: theme.text.meta),
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: .min,
-                  children: [
-                    Text('$_counter', style: theme.text.numeral),
-                    const SizedBox(height: 5),
-                    Text('taps so far', style: theme.text.meta),
-                  ],
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 104,
-                  child: AppButton(
-                    label: 'Reset',
-                    variant: .secondary,
-                    onPressed: _counter == 0 ? null : () => setState(() => _counter = 0),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: AppButton(
-                    label: 'Add one',
-                    subLabel: 'you will be at ${_counter + 1}',
-                    onPressed: () => setState(() => _counter++),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+      // The view model lives as long as the screen and is disposed with it.
+      home: ChangeNotifierProvider(
+        create: (context) => EventsViewModel(events: context.read()),
+        builder: (context, _) => EventsScreen(viewModel: context.read()),
       ),
     );
   }
