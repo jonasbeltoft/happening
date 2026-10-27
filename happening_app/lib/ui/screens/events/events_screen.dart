@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import '../../../types/event.dart';
 import '../../components/button/app_button.dart';
 import '../../components/button/app_pill_button.dart';
-import '../../core/pressable.dart';
 import '../../theme/app_theme.dart';
 import 'events_view_model.dart';
 
@@ -28,13 +27,11 @@ class EventsScreen extends StatelessWidget {
                 children: [
                   Expanded(child: Text('Around you', style: theme.text.screenTitle)),
                   // TEMP: reset fake data so the buttons can be pressed again.
+                  // Outside the list, so it shows the instant (non-scroll) press.
                   if (viewModel.canReset)
-                    Pressable(
-                      onPressed: viewModel.reset,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: 12),
-                        child: Text('Reset', style: theme.text.meta),
-                      ),
+                    SizedBox(
+                      width: 104,
+                      child: AppButton(label: 'Reset', variant: .secondary, onPressed: viewModel.reset),
                     ),
                 ],
               ),

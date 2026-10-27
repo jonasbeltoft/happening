@@ -168,7 +168,7 @@ class ThingsViewModel extends ChangeNotifier {
 - **Tokens only.** Colors, text styles, spacing, radii and shadows come from `AppTheme.of(context)` and the `AppSpacing`, `AppRadius` and `AppShadows` constants in `ui/theme/app_theme.dart`. Never hardcode a color or font size in a widget; add a token. Fonts (Archivo, Instrument Serif) are bundled in `assets/fonts`.
 - **Type sizes follow Apple, not the mock.** `Main_Design.html` draws text at its on-device size, and it is 2 to 4pt below platform guidance. The tokens use Apple's Dynamic Type defaults instead, keeping the design's proportions: screen title 34, section head 22, card title 20, row title 17, button 17, body 16, pill button 15, meta 14, eyebrow and button sub-line 12, never below 11. When building from the mock, map its sizes to the most relevant token; don't copy pixel sizes. Commit-bar buttons are 56px tall, so a label and sub-line must still fit.
 - **Components** live in `ui/components/`. Check there before building something new. A component used by two screens moves there. One file per component, or a folder when it has variants (`components/button/` holds `AppButton` and `AppPillButton`).
-- **Tappable things** build on `Pressable` (`ui/core/pressable.dart`). It gives semantics, a pressed fade and a dimmed disabled state (`onPressed: null`).
+- **Tappable things** build on `Pressable` (`ui/core/pressable.dart`). It follows Apple's button behavior: a pressed fade and slight shrink (shrink skipped under Reduce Motion), a dimmed disabled state (`onPressed: null`), a hit area of at least 44x44 even for smaller visuals, and a short delay before the pressed look only inside scrolling content (instant elsewhere, like UIKit). Never build tap handling with a bare `GestureDetector`.
 - Eyebrow text is uppercase in the design: call `.toUpperCase()` on the string; Flutter has no text-transform.
 - Screen padding is `AppSpacing.gutter` (22) horizontally. Scrolling content ends with a 24px spacer.
 
@@ -180,7 +180,7 @@ class ThingsViewModel extends ChangeNotifier {
 - **Shapes:** radii 10 pills/tiles, 12–14 small buttons, 16 rows and buttons, 18–20 cards, 26–28 sheets. Three elevations only: row, card, hero.
 - **Type:** Instrument Serif for screen titles, section heads, the wordmark, pitch quotes, and numbers that are the point (counts, walk minutes). Archivo for everything else. Sentence case everywhere except eyebrows.
 - **Copy:** no em dashes, no prime marks for minutes ("14 min", not 14′), no emoji. Every count states its unit in words.
-- **Hit targets** are at least 44px; row buttons 36–40px tall. Meta lines don't wrap (`maxLines: 1`).
+- **Hit targets** are at least 44pt (`Pressable` enforces this); a row button can look 36–40pt tall. Meta lines don't wrap (`maxLines: 1`).
 - **Horizontal shelves** bleed off the right edge instead of showing "+2". No visible scrollbars.
 - **Icons** are SVG, never icon fonts.
 

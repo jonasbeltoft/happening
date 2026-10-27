@@ -3,8 +3,12 @@ import 'dart:async';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 
-/// Tap handling shared by all buttons: semantics, a pressed fade, and a
-/// dimmed disabled state when [onPressed] is null.
+/// Tap handling shared by all buttons: semantics, a pressed fade and shrink,
+/// a dimmed disabled state when [onPressed] is null, and a hit area of at
+/// least 44x44 (Apple's minimum) even when [child] is smaller.
+///
+/// Like UIKit, the pressed look waits briefly inside scrolling content (to
+/// tell taps from scrolls) and shows instantly everywhere else.
 class Pressable extends StatefulWidget {
   const Pressable({super.key, required this.onPressed, required this.child});
 
@@ -16,12 +20,14 @@ class Pressable extends StatefulWidget {
 }
 
 class _PressableState extends State<Pressable> {
-  /// How long a finger must rest before the fade starts, so a touch that
-  /// turns into a scroll doesn't flicker.
+  /// Inside a scrollable, how long a finger must rest before the fade starts,
+  /// so a touch that turns into a scroll doesn't flicker.
   static const _pressDelay = Duration(milliseconds: 50);
 
   /// Duration of the fade and shrink, both in and out.
   static const _pressAnimation = Duration(milliseconds: 100);
+
+  static const _minHitSize = 44.0;
 
   bool _pressed = false;
   Offset? _downAt;
@@ -42,6 +48,10 @@ class _PressableState extends State<Pressable> {
     _downAt = event.position;
     _flashTimer?.cancel();
     _pressTimer?.cancel();
+    if (Scrollable.maybeOf(context) == null) {
+      _setPressed(true);
+      return;
+    }
     _pressTimer = Timer(_pressDelay, () {
       _pressTimer = null;
       _setPressed(true);
@@ -86,6 +96,9 @@ class _PressableState extends State<Pressable> {
   @override
   Widget build(BuildContext context) {
     final enabled = widget.onPressed != null;
+    // Reduce Motion (iOS) or Remove animations (Android): keep the fade, drop
+    // the shrink.
+    final shrink = _pressed && !MediaQuery.disableAnimationsOf(context);
 
     return Semantics(
       button: true,
@@ -99,15 +112,25 @@ class _PressableState extends State<Pressable> {
         child: GestureDetector(
           behavior: HitTestBehavior.opaque,
           onTap: widget.onPressed,
-          // Gestures are detected outside the scale, so the hit area stays
-          // full size while the button shrinks.
-          child: AnimatedScale(
-            duration: _pressAnimation,
-            scale: _pressed ? 0.96 : 1,
-            child: AnimatedOpacity(
-              duration: _pressAnimation,
-              opacity: !enabled ? 0.4 : (_pressed ? 0.65 : 1),
-              child: widget.child,
+          // Gestures are detected outside the size padding and the scale, so
+          // the hit area stays at least 44x44 and full size while pressed.
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+              minWidth: _minHitSize,
+              minHeight: _minHitSize,
+            ),
+            child: Center(
+              widthFactor: 1,
+              heightFactor: 1,
+              child: AnimatedScale(
+                duration: _pressAnimation,
+                scale: shrink ? 0.97 : 1,
+                child: AnimatedOpacity(
+                  duration: _pressAnimation,
+                  opacity: !enabled ? 0.4 : (_pressed ? 0.65 : 1),
+                  child: widget.child,
+                ),
+              ),
             ),
           ),
         ),
