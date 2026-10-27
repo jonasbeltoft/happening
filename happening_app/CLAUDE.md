@@ -1,6 +1,15 @@
 # Happening app
 
-How this Flutter app is built. Follow these rules for every feature. The rules are the source of truth; any feature code in the repo is just an example of them.
+How this Flutter app is built. Follow these rules for every feature. The rules are the source of truth; the example code is just one illustration of them.
+
+## Example code
+
+A complete example feature (events near you: REST, WebSocket updates, RSVP) lives in the repo as a reference. Everything in it is prefixed: files start with `example_`, classes with `Example` (`ExampleEvent`, `ExampleEventRepository`, `ExampleEventsViewModel`, …), and each file opens with an "Example code" comment.
+
+- Never import, extend or register example code from real features or `main.dart`. Copy its patterns instead.
+- Example files: `types/example_event.dart`, `data/dtos/example_event_dto.dart`, `data/services/example_events_api_service.dart`, `data/repositories/example_event/`, `ui/screens/example_events/`, `config/example_dependencies.dart` (its provider wiring) and `test/example_events_test.dart` (shows how to test a screen with fakes).
+- The example contains a TEMP reset button that breaks the layering rules on purpose; don't copy that part.
+- Keep the example compiling and its test passing. Delete it all at once if it's ever removed.
 
 Based on the [Flutter app architecture guide](https://docs.flutter.dev/app-architecture/guide), adapted as described below.
 
@@ -16,8 +25,9 @@ Paths are relative to `lib/`. Folders marked *infra* are shared plumbing and sta
 
 ```
 core/                  infra: code shared by every layer (Result)
-types/                 immutable app types, e.g. Event, Rsvp
+types/                 immutable app types
 config/                app_config.dart (dart-define settings), dependencies.dart (provider wiring)
+main.dart              HappeningApp (WidgetsApp, theme, chalk background); `home` is HomeScreen
 data/
   dtos/                *Dto classes shaped like the server JSON
   services/
@@ -150,7 +160,7 @@ class ThingsViewModel extends ChangeNotifier {
 
 **8. Route**: the view model is created next to its screen with `ChangeNotifierProvider(create: (context) => ThingsViewModel(things: context.read()), builder: (context, _) => ThingsScreen(viewModel: context.read()))`, so it is disposed with the screen.
 
-**9. Test** in `test/`: a widget test that pumps `MultiProvider(providers: fakeProviders, child: const HappeningApp())`, advances past the fake latency with `tester.pump(const Duration(seconds: 1))` then `pumpAndSettle()`, and asserts on visible text. Unit-test `ApiClient` with an injected `Dio` and `WebSocketClient` with an injected `connect` function.
+**9. Test** in `test/`: a widget test that pumps `MultiProvider(providers: fakeProviders, child: HappeningApp(home: <the screen with its ChangeNotifierProvider>))`, advances past the fake latency with `tester.pump(const Duration(seconds: 1))` then `pumpAndSettle()`, and asserts on visible text. Unit-test `ApiClient` with an injected `Dio` and `WebSocketClient` with an injected `connect` function.
 
 ## WebSocket
 

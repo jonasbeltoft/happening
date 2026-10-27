@@ -1,16 +1,19 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'dart:async';
 
 import '../../../core/result.dart';
-import '../../../types/event.dart';
-import '../../dtos/event_dto.dart';
-import '../../services/events_api_service.dart';
+import '../../../types/example_event.dart';
+import '../../dtos/example_event_dto.dart';
+import '../../services/example_events_api_service.dart';
 import '../../services/websocket/websocket_client.dart';
-import 'event_repository.dart';
+import 'example_event_repository.dart';
 
 /// Loads events over REST and keeps them current with WebSocket messages on
 /// the `events` topic.
-class EventRepositoryRemote implements EventRepository {
-  EventRepositoryRemote({required this._api, required this._webSocket}) {
+class ExampleEventRepositoryRemote implements ExampleEventRepository {
+  ExampleEventRepositoryRemote({required this._api, required this._webSocket}) {
     // Updates sent while the socket was down are lost; refetch to catch up.
     _reconnectSub = _webSocket.reconnected.listen((_) {
       if (_nearbyController.hasListener) refreshNearby();
@@ -19,15 +22,15 @@ class EventRepositoryRemote implements EventRepository {
 
   static const _topic = 'events';
 
-  final EventsApiService _api;
+  final ExampleEventsApiService _api;
   final WebSocketClient _webSocket;
 
-  List<Event>? _nearby;
+  List<ExampleEvent>? _nearby;
   late final StreamSubscription<void> _reconnectSub;
   StreamSubscription<WebSocketMessage>? _topicSub;
 
   // The WebSocket topic is only subscribed while someone is listening.
-  late final _nearbyController = StreamController<List<Event>>.broadcast(
+  late final _nearbyController = StreamController<List<ExampleEvent>>.broadcast(
     onListen: () =>
         _topicSub = _webSocket.topic(_topic).listen(_onWebSocketMessage),
     onCancel: () {
@@ -37,7 +40,7 @@ class EventRepositoryRemote implements EventRepository {
   );
 
   @override
-  Stream<List<Event>> get nearby async* {
+  Stream<List<ExampleEvent>> get nearby async* {
     if (_nearby case final events?) yield events;
     yield* _nearbyController.stream;
   }
@@ -54,7 +57,7 @@ class EventRepositoryRemote implements EventRepository {
   }
 
   @override
-  Future<Result<Event>> setRsvp(String eventId, Rsvp rsvp) async {
+  Future<Result<ExampleEvent>> setRsvp(String eventId, ExampleRsvp rsvp) async {
     switch (await _api.setRsvp(eventId, rsvp.name)) {
       case Ok(:final value):
         final event = _fromDto(value);
@@ -76,7 +79,7 @@ class EventRepositoryRemote implements EventRepository {
     try {
       switch (message.type) {
         case 'event.updated':
-          _upsert(_fromDto(EventDto.fromJson(message.data)));
+          _upsert(_fromDto(ExampleEventDto.fromJson(message.data)));
         case 'event.removed':
           final id = (message.data as Map<String, Object?>)['id'] as String;
           if (_nearby case final events?) {
@@ -88,19 +91,19 @@ class EventRepositoryRemote implements EventRepository {
     }
   }
 
-  void _upsert(Event event) {
+  void _upsert(ExampleEvent event) {
     final events = _nearby;
     if (events == null) return;
     final index = events.indexWhere((e) => e.id == event.id);
     _emit(index == -1 ? [...events, event] : ([...events]..[index] = event));
   }
 
-  void _emit(List<Event> events) {
+  void _emit(List<ExampleEvent> events) {
     _nearby = List.unmodifiable(events);
     _nearbyController.add(_nearby!);
   }
 
-  static Event _fromDto(EventDto dto) => Event(
+  static ExampleEvent _fromDto(ExampleEventDto dto) => ExampleEvent(
     id: dto.id,
     title: dto.title,
     venue: dto.venue,
@@ -110,6 +113,6 @@ class EventRepositoryRemote implements EventRepository {
     priceKr: dto.priceKr,
     goingCount: dto.goingCount,
     friendsGoing: dto.friendsGoing,
-    rsvp: Rsvp.values.asNameMap()[dto.rsvp] ?? Rsvp.none,
+    rsvp: ExampleRsvp.values.asNameMap()[dto.rsvp] ?? ExampleRsvp.none,
   );
 }

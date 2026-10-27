@@ -1,12 +1,15 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'package:flutter/foundation.dart';
 
 /// The current user's answer to an event.
-enum Rsvp { none, interested, going }
+enum ExampleRsvp { none, interested, going }
 
 /// An event as the app uses it. Immutable; change it with [copyWith].
 @immutable
-class Event {
-  const Event({
+class ExampleEvent {
+  const ExampleEvent({
     required this.id,
     required this.title,
     required this.venue,
@@ -30,11 +33,11 @@ class Event {
   final int? priceKr;
   final int goingCount;
   final int friendsGoing;
-  final Rsvp rsvp;
+  final ExampleRsvp rsvp;
 
   bool get isFree => priceKr == null;
 
-  Event copyWith({int? goingCount, int? friendsGoing, Rsvp? rsvp}) => Event(
+  ExampleEvent copyWith({int? goingCount, int? friendsGoing, ExampleRsvp? rsvp}) => ExampleEvent(
     id: id,
     title: title,
     venue: venue,

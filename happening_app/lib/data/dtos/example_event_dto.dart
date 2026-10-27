@@ -1,10 +1,13 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'package:flutter/foundation.dart';
 
 /// An event exactly as the server sends it. Only the data layer sees this;
-/// repositories map it to the app type `Event` (lib/types).
+/// repositories map it to the app type `ExampleEvent` (lib/types).
 @immutable
-class EventDto {
-  const EventDto({
+class ExampleEventDto {
+  const ExampleEventDto({
     required this.id,
     required this.title,
     required this.venue,
@@ -19,9 +22,9 @@ class EventDto {
 
   /// Throws on a missing or mistyped field; `ApiClient` turns that into a
   /// `BadResponseException`.
-  factory EventDto.fromJson(Object? json) {
+  factory ExampleEventDto.fromJson(Object? json) {
     if (json is! Map<String, Object?>) throw FormatException('Expected an event object, got $json');
-    return EventDto(
+    return ExampleEventDto(
       id: json['id'] as String,
       title: json['title'] as String,
       venue: json['venue'] as String,
@@ -35,9 +38,9 @@ class EventDto {
     );
   }
 
-  static List<EventDto> listFromJson(Object? json) {
+  static List<ExampleEventDto> listFromJson(Object? json) {
     if (json is! List<Object?>) throw FormatException('Expected a list of events, got $json');
-    return json.map(EventDto.fromJson).toList();
+    return json.map(ExampleEventDto.fromJson).toList();
   }
 
   final String id;

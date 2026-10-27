@@ -1,15 +1,18 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'package:flutter/widgets.dart';
 
-import '../../../types/event.dart';
+import '../../../types/example_event.dart';
 import '../../components/button/app_button.dart';
 import '../../components/button/app_pill_button.dart';
 import '../../theme/app_theme.dart';
-import 'events_view_model.dart';
+import 'example_events_view_model.dart';
 
-class EventsScreen extends StatelessWidget {
-  const EventsScreen({super.key, required this.viewModel});
+class ExampleEventsScreen extends StatelessWidget {
+  const ExampleEventsScreen({super.key, required this.viewModel});
 
-  final EventsViewModel viewModel;
+  final ExampleEventsViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +80,10 @@ class EventsScreen extends StatelessWidget {
         for (final row in viewModel.rows)
           Padding(
             padding: const EdgeInsets.only(bottom: AppSpacing.sm),
-            child: _EventRow(
+            child: _ExampleEventRow(
               row: row,
               answering: viewModel.isAnswering(row.id),
-              onGoing: () => viewModel.answer.execute((row.id, Rsvp.going)),
+              onGoing: () => viewModel.answer.execute((row.id, ExampleRsvp.going)),
             ),
           ),
       ],
@@ -88,10 +91,10 @@ class EventsScreen extends StatelessWidget {
   }
 }
 
-class _EventRow extends StatelessWidget {
-  const _EventRow({required this.row, required this.answering, required this.onGoing});
+class _ExampleEventRow extends StatelessWidget {
+  const _ExampleEventRow({required this.row, required this.answering, required this.onGoing});
 
-  final EventRowState row;
+  final ExampleEventRowState row;
   final bool answering;
   final VoidCallback onGoing;
 

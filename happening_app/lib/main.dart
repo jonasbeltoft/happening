@@ -3,21 +3,20 @@ import 'package:provider/provider.dart';
 
 import 'config/app_config.dart';
 import 'config/dependencies.dart';
-import 'ui/screens/events/events_screen.dart';
-import 'ui/screens/events/events_view_model.dart';
+import 'ui/screens/home/home_screen.dart';
 import 'ui/theme/app_theme.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: AppConfig.useFakeData ? fakeProviders : remoteProviders,
-      child: const HappeningApp(),
-    ),
-  );
+  final providers = AppConfig.useFakeData ? fakeProviders : remoteProviders;
+  // MultiProvider asserts a non-empty list.
+  runApp(providers.isEmpty ? const HappeningApp() : MultiProvider(providers: providers, child: const HappeningApp()));
 }
 
 class HappeningApp extends StatelessWidget {
-  const HappeningApp({super.key});
+  const HappeningApp({super.key, this.home = const HomeScreen()});
+
+  /// The first screen. Tests pass a different one.
+  final Widget home;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +32,7 @@ class HappeningApp extends StatelessWidget {
         theme: theme,
         child: ColoredBox(color: theme.colors.chalk, child: child),
       ),
-      // The view model lives as long as the screen and is disposed with it.
-      home: ChangeNotifierProvider(
-        create: (context) => EventsViewModel(events: context.read()),
-        builder: (context, _) => EventsScreen(viewModel: context.read()),
-      ),
+      home: home,
     );
   }
 }

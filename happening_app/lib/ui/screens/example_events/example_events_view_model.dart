@@ -1,18 +1,21 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
 import '../../../core/result.dart';
-import '../../../data/repositories/event/event_repository.dart';
-import '../../../data/repositories/event/event_repository_fake.dart'; // TEMP: reset
+import '../../../data/repositories/example_event/example_event_repository.dart';
+import '../../../data/repositories/example_event/example_event_repository_fake.dart'; // TEMP: reset
 import '../../../data/services/api/api_exception.dart';
-import '../../../types/event.dart';
+import '../../../types/example_event.dart';
 import '../../core/command.dart';
 
 /// One row on the events screen, already worded for display.
 @immutable
-class EventRowState {
-  const EventRowState({
+class ExampleEventRowState {
+  const ExampleEventRowState({
     required this.id,
     required this.title,
     required this.meta,
@@ -33,24 +36,24 @@ class EventRowState {
   final String? answer;
 }
 
-class EventsViewModel extends ChangeNotifier {
-  EventsViewModel({required this._events}) {
+class ExampleEventsViewModel extends ChangeNotifier {
+  ExampleEventsViewModel({required this._events}) {
     _sub = _events.nearby.listen(_onEvents);
     load = Command0(_events.refreshNearby)..execute();
     answer = Command1(_answer);
   }
 
-  final EventRepository _events;
-  late final StreamSubscription<List<Event>> _sub;
+  final ExampleEventRepository _events;
+  late final StreamSubscription<List<ExampleEvent>> _sub;
 
   /// Loads the list. Runs once on creation; call again to retry.
   late final Command0<void> load;
 
   /// Answers an event with (eventId, rsvp).
-  late final Command1<void, (String, Rsvp)> answer;
+  late final Command1<void, (String, ExampleRsvp)> answer;
 
-  List<EventRowState> _rows = const [];
-  List<EventRowState> get rows => _rows;
+  List<ExampleEventRowState> _rows = const [];
+  List<ExampleEventRowState> get rows => _rows;
 
   String _summary = '';
 
@@ -74,9 +77,9 @@ class EventsViewModel extends ChangeNotifier {
 
   // TEMP: reset for trying answers again. Only works with fake data, and
   // breaks the rule that view models only know the repository interface.
-  bool get canReset => _events is EventRepositoryFake;
+  bool get canReset => _events is ExampleEventRepositoryFake;
   void reset() {
-    if (_events case final EventRepositoryFake fake) fake.reset();
+    if (_events case final ExampleEventRepositoryFake fake) fake.reset();
   }
 
   @override
@@ -87,7 +90,7 @@ class EventsViewModel extends ChangeNotifier {
     super.dispose();
   }
 
-  Future<Result<void>> _answer((String, Rsvp) args) async {
+  Future<Result<void>> _answer((String, ExampleRsvp) args) async {
     final (eventId, rsvp) = args;
     _pendingId = eventId;
     final result = await _events.setRsvp(eventId, rsvp);
@@ -98,14 +101,14 @@ class EventsViewModel extends ChangeNotifier {
     };
   }
 
-  void _onEvents(List<Event> events) {
+  void _onEvents(List<ExampleEvent> events) {
     final sorted = [...events]
       ..sort((a, b) => a.startsAt.compareTo(b.startsAt));
     _rows = sorted.map(_toRow).toList();
 
     final now = DateTime.now();
     final tonight = events.where((e) => _isSameDay(e.startsAt, now)).length;
-    final unanswered = events.where((e) => e.rsvp == Rsvp.none).length;
+    final unanswered = events.where((e) => e.rsvp == ExampleRsvp.none).length;
     _summary = [
       '${_count(events.length, 'event')} near you, $tonight of them tonight.',
       if (unanswered > 0)
@@ -115,8 +118,8 @@ class EventsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  static EventRowState _toRow(Event event) {
-    final needsAnswer = event.rsvp == Rsvp.none;
+  static ExampleEventRowState _toRow(ExampleEvent event) {
+    final needsAnswer = event.rsvp == ExampleRsvp.none;
     final time = _formatTime(event.startsAt);
     final meta = needsAnswer
         ? '$time · no answer yet'
@@ -126,15 +129,15 @@ class EventsViewModel extends ChangeNotifier {
             event.isFree ? 'free' : '${event.priceKr} kr',
           ].join(' · ');
 
-    return EventRowState(
+    return ExampleEventRowState(
       id: event.id,
       title: event.title,
       meta: meta,
       needsAnswer: needsAnswer,
       answer: switch (event.rsvp) {
-        Rsvp.going => "You're in",
-        Rsvp.interested => 'Interested',
-        Rsvp.none => null,
+        ExampleRsvp.going => "You're in",
+        ExampleRsvp.interested => 'Interested',
+        ExampleRsvp.none => null,
       },
     );
   }

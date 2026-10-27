@@ -1,21 +1,24 @@
+// Example code: a reference for the architecture. Never import it from real
+// features; copy the pattern instead.
+
 import 'dart:async';
 
 import '../../../core/result.dart';
-import '../../../types/event.dart';
-import 'event_repository.dart';
+import '../../../types/example_event.dart';
+import 'example_event_repository.dart';
 
 /// In-memory events for building screens without a server, and for tests.
-class EventRepositoryFake implements EventRepository {
-  EventRepositoryFake({this.latency = const Duration(milliseconds: 300)});
+class ExampleEventRepositoryFake implements ExampleEventRepository {
+  ExampleEventRepositoryFake({this.latency = const Duration(milliseconds: 300)});
 
   /// Simulated network delay.
   final Duration latency;
 
-  List<Event>? _nearby;
-  final _nearbyController = StreamController<List<Event>>.broadcast();
+  List<ExampleEvent>? _nearby;
+  final _nearbyController = StreamController<List<ExampleEvent>>.broadcast();
 
   @override
-  Stream<List<Event>> get nearby async* {
+  Stream<List<ExampleEvent>> get nearby async* {
     if (_nearby case final events?) yield events;
     yield* _nearbyController.stream;
   }
@@ -28,7 +31,7 @@ class EventRepositoryFake implements EventRepository {
   }
 
   @override
-  Future<Result<Event>> setRsvp(String eventId, Rsvp rsvp) async {
+  Future<Result<ExampleEvent>> setRsvp(String eventId, ExampleRsvp rsvp) async {
     await Future<void>.delayed(latency);
     final events = _nearby ?? const [];
     final index = events.indexWhere((e) => e.id == eventId);
@@ -36,7 +39,7 @@ class EventRepositoryFake implements EventRepository {
 
     final old = events[index];
     final delta =
-        (rsvp == Rsvp.going ? 1 : 0) - (old.rsvp == Rsvp.going ? 1 : 0);
+        (rsvp == ExampleRsvp.going ? 1 : 0) - (old.rsvp == ExampleRsvp.going ? 1 : 0);
     final updated = old.copyWith(
       rsvp: rsvp,
       goingCount: old.goingCount + delta,
@@ -51,16 +54,16 @@ class EventRepositoryFake implements EventRepository {
   @override
   void dispose() => _nearbyController.close();
 
-  void _emit(List<Event> events) {
+  void _emit(List<ExampleEvent> events) {
     _nearby = List.unmodifiable(events);
     _nearbyController.add(_nearby!);
   }
 
-  static List<Event> _sample() {
+  static List<ExampleEvent> _sample() {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     return [
-      Event(
+      ExampleEvent(
         id: 'vinyl-bakken',
         title: 'Vinyl night at Bakken',
         venue: 'Bakken, Kødbyen',
@@ -70,9 +73,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 80,
         goingCount: 64,
         friendsGoing: 3,
-        rsvp: Rsvp.going,
+        rsvp: ExampleRsvp.going,
       ),
-      Event(
+      ExampleEvent(
         id: 'harbour-swim',
         title: 'Harbour swim & sauna',
         venue: 'Islands Brygge',
@@ -80,9 +83,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 18,
         goingCount: 22,
         friendsGoing: 1,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'open-mic-absalon',
         title: 'Open mic, Absalon',
         venue: 'Absalon, Vesterbro',
@@ -90,9 +93,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 9,
         goingCount: 41,
         friendsGoing: 0,
-        rsvp: Rsvp.interested,
+        rsvp: ExampleRsvp.interested,
       ),
-      Event(
+      ExampleEvent(
         id: 'rooftop-dinner',
         title: 'Rooftop dinner, Nørrebro',
         venue: 'Jægersborggade',
@@ -101,9 +104,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 150,
         goingCount: 9,
         friendsGoing: 2,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'flea-market-ravnsborg',
         title: 'Evening flea market',
         venue: 'Ravnsborggade',
@@ -111,9 +114,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 15,
         goingCount: 130,
         friendsGoing: 4,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'natural-wine-tasting',
         title: 'Natural wine tasting',
         venue: 'Ved Stranden 10',
@@ -122,9 +125,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 175,
         goingCount: 18,
         friendsGoing: 1,
-        rsvp: Rsvp.going,
+        rsvp: ExampleRsvp.going,
       ),
-      Event(
+      ExampleEvent(
         id: 'pub-quiz-mikkeller',
         title: 'Pub quiz at Mikkeller',
         venue: 'Viktoriagade',
@@ -132,9 +135,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 11,
         goingCount: 36,
         friendsGoing: 5,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'cinema-paradise',
         title: 'Outdoor cinema, Paradise Bio',
         venue: 'Kongens Have',
@@ -143,9 +146,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 60,
         goingCount: 210,
         friendsGoing: 2,
-        rsvp: Rsvp.interested,
+        rsvp: ExampleRsvp.interested,
       ),
-      Event(
+      ExampleEvent(
         id: 'jazz-la-fontaine',
         title: 'Late jazz session',
         venue: 'La Fontaine',
@@ -154,9 +157,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 50,
         goingCount: 27,
         friendsGoing: 0,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'techno-ksb',
         title: 'Techno night at KB18',
         venue: 'Kødboderne 18',
@@ -165,9 +168,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 120,
         goingCount: 340,
         friendsGoing: 6,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'morning-run-faelled',
         title: 'Morning run in Fælledparken',
         venue: 'Fælledparken',
@@ -175,9 +178,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 17,
         goingCount: 14,
         friendsGoing: 1,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'ceramics-workshop',
         title: 'Ceramics workshop',
         venue: 'Studio Nørrebro',
@@ -186,9 +189,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 250,
         goingCount: 8,
         friendsGoing: 0,
-        rsvp: Rsvp.going,
+        rsvp: ExampleRsvp.going,
       ),
-      Event(
+      ExampleEvent(
         id: 'board-games-bastard',
         title: 'Board games night',
         venue: 'Bastard Café',
@@ -196,9 +199,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 5,
         goingCount: 45,
         friendsGoing: 3,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'street-food-reffen',
         title: 'Street food at Reffen',
         venue: 'Refshaleøen',
@@ -206,9 +209,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 35,
         goingCount: 520,
         friendsGoing: 7,
-        rsvp: Rsvp.interested,
+        rsvp: ExampleRsvp.interested,
       ),
-      Event(
+      ExampleEvent(
         id: 'poetry-reading',
         title: 'Poetry reading',
         venue: 'Paludan Bogcafé',
@@ -216,9 +219,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 8,
         goingCount: 19,
         friendsGoing: 0,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'salsa-social',
         title: 'Salsa social, beginners welcome',
         venue: 'Huset',
@@ -227,9 +230,9 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 40,
         goingCount: 62,
         friendsGoing: 2,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'sunday-football',
         title: 'Sunday football, Fælleden',
         venue: 'Fælledparken',
@@ -237,9 +240,9 @@ class EventRepositoryFake implements EventRepository {
         walkMinutes: 17,
         goingCount: 14,
         friendsGoing: 4,
-        rsvp: Rsvp.none,
+        rsvp: ExampleRsvp.none,
       ),
-      Event(
+      ExampleEvent(
         id: 'harbour-kayak',
         title: 'Harbour kayak tour',
         venue: 'Christianshavn',
@@ -248,7 +251,7 @@ class EventRepositoryFake implements EventRepository {
         priceKr: 300,
         goingCount: 12,
         friendsGoing: 1,
-        rsvp: Rsvp.going,
+        rsvp: ExampleRsvp.going,
       ),
     ];
   }
