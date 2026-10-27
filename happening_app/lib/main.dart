@@ -23,7 +23,7 @@ class HappeningApp extends StatelessWidget {
     final theme = AppTheme.light;
 
     return WidgetsApp(
-      title: "It's Happening",
+      title: 'Happening',
       color: theme.colors.ember,
       debugShowCheckedModeBanner: false,
       pageRouteBuilder: <T>(settings, builder) =>
